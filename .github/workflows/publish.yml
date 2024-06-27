@@ -32,13 +32,10 @@ jobs:
       - name: Build with Next.js
         run: npx next build
 
-      - name: Export Next.js application
-        run: npx next export
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: .
 
   deploy:
     environment:
