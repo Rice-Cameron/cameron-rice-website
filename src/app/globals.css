@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body {
+    color: rgb(var(--foreground-rgb));
+    padding: 1rem;
+}
 
 /*:root {*/
 /*  --foreground-rgb: 0, 0, 0;*/
