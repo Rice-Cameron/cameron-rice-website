@@ -3,36 +3,129 @@
 @tailwind utilities;
 
 body {
-    color: rgb(var(--foreground-rgb));
-    padding: 1rem;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/*:root {*/
-/*  --foreground-rgb: 0, 0, 0;*/
-/*  --background-start-rgb: 214, 219, 220;*/
-/*  --background-end-rgb: 255, 255, 255;*/
-/*}*/
+h1 {
+    text-align: center;
+    color: #333;
+}
 
-/*@media (prefers-color-scheme: dark) {*/
-/*  :root {*/
-/*    --foreground-rgb: 255, 255, 255;*/
-/*    --background-start-rgb: 0, 0, 0;*/
-/*    --background-end-rgb: 0, 0, 0;*/
-/*  }*/
-/*}*/
+h2 {
+    color: #555;
+}
 
-/*body {*/
-/*  color: rgb(var(--foreground-rgb));*/
-/*  background: linear-gradient(*/
-/*      to bottom,*/
-/*      transparent,*/
-/*      rgb(var(--background-end-rgb))*/
-/*    )*/
-/*    rgb(var(--background-start-rgb));*/
-/*}*/
+ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-/*@layer utilities {*/
-/*  .text-balance {*/
-/*    text-wrap: balance;*/
-/*  }*/
-/*}*/
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #0070f3;
+    padding: 10px 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+li {
+    background: #fff;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+a {
+    text-decoration: none;
+    color: #0070f3;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #0070f3; /* Match the navbar color */
+    color: white; /* Text color for the footer */
+    text-align: center; /* Center the text */
+    padding: 15px 0; /* Reduced padding for the footer */
+    position: relative; /* Positioning */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    margin-top: 0; /* Remove extra space above the footer */
+}
+
+main {
+    flex: 1; /* Allow main content to grow and fill space */
+}
+
+.home-container {
+    padding: 15px; /* Reduced padding */
+    max-width: 800px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the content */
+}
+
+.home-title {
+    text-align: center;
+    color: #333;
+    margin: 15px 0; /* Reduced margin */
+    font-size: 2rem; /* Slightly smaller font size */
+    font-weight: bold; /* Make the title bold */
+}
+
+.home-intro {
+    text-align: center;
+    color: #555;
+    font-size: 1rem; /* Slightly smaller font size */
+    margin-bottom: 20px; /* Reduced space below the intro */
+}
+
+.project-list {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-around; /* Space out the cards */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-link {
+    display: flex; /* Make the link a flex container */
+    justify-content: center; /* Center the text */
+    align-items: center; /* Center the text vertically */
+    background: #0070f3; /* Background color for the project links */
+    color: white; /* Text color */
+    padding: 15px; /* Reduced padding */
+    border-radius: 10px; /* Rounded corners */
+    margin: 8px; /* Reduced space between cards */
+    width: 130px; /* Slightly smaller width for square cards */
+    height: 130px; /* Slightly smaller height for square cards */
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    text-decoration: none; /* Remove underline */
+}
+
+.project-link:hover {
+    background-color: #005bb5; /* Darker shade on hover */
+}
