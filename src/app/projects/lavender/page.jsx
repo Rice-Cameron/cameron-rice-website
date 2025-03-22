@@ -23,6 +23,8 @@ export default function Lavender() {
           <Image
             className='h-96 w-full rounded-lg object-contain'
             src='/lavender.png'
+            width={384}
+            height={384}
             alt='Lavender'
           />
         </div>

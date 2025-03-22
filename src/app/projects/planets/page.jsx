@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Planets() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +28,8 @@ export default function Planets() {
           <Image
             src='/planets2.png'
             alt='Kotlin Planet App'
+            width={384}
+            height={384}
             className='h-96 w-full rounded-lg object-contain'
           />
         </div>

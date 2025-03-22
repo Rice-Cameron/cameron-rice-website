@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function BudgetTracker() {
   return (
@@ -24,6 +25,8 @@ export default function BudgetTracker() {
           <Image
             className='h-96 w-full rounded-lg object-contain'
             src='/budget-tracker.png'
+            width={384}
+            height={384}
             alt='Budget Tracker'
           />
         </div>
