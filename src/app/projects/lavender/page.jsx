@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Lavender() {
   return (
@@ -19,7 +20,7 @@ export default function Lavender() {
         </p>
 
         <div className='mb-12 flex h-96 w-full items-center justify-center rounded-lg bg-gray-200 text-gray-400'>
-          <img
+          <Image
             className='h-96 w-full rounded-lg object-contain'
             src='/lavender.png'
             alt='Lavender'

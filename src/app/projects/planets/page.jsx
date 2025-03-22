@@ -24,7 +24,7 @@ export default function Planets() {
         </p>
 
         <div className='mb-12 flex h-96 w-full items-center justify-center rounded-lg bg-gray-200 text-gray-400'>
-          <img
+          <Image
             src='/planets2.png'
             alt='Kotlin Planet App'
             className='h-96 w-full rounded-lg object-contain'
