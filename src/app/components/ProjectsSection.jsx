@@ -6,31 +6,30 @@ import ProjectCard from './ProjectCard';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'Project 1',
+      title: 'Lavender',
       description:
-        'A responsive web application with modern UI/UX design principles. Built using React.js and Node.js, featuring real-time updates and interactive elements.',
-      image: '/project-placeholder.jpg',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      link: '/projects/project1',
-      github: 'https://github.com/'
+        'A responsive web application with modern UI/UX design principles. Built using React.js and Google Firebase, aimed to help the lives of those who suffer from Shift Work Sleep Disorder.',
+      image: '/lavender.png',
+      tags: ['React', 'Firebase', 'Vite'],
+      link: '/projects/lavender'
     },
     {
-      title: 'Project 2',
+      title: 'Budget Tracker',
       description:
-        'A mobile-first e-commerce platform that provides seamless shopping experiences. Implements secure payment processing and user authentication.',
-      image: '/project-placeholder.jpg',
-      tags: ['Next.js', 'TailwindCSS', 'Stripe'],
-      link: '/projects/project2',
-      github: 'https://github.com/'
+        'One of my first ever projects that I built using vanilla JavaScript. It is a simple budget tracker that helps users keep track of their expenses and income.',
+      image: '/budget-tracker.png',
+      tags: ['JavaScript', 'HTML', 'CSS', 'Handlebars', 'Node.js'],
+      link: '/projects/budget-tracker',
+      github: 'https://github.com/Rice-Cameron/js-budget-tracker'
     },
     {
-      title: 'Project 3',
+      title: 'Planet API Mobile App',
       description:
-        'A data visualization dashboard that presents complex information in an intuitive interface. Features customizable charts and exportable reports.',
-      image: '/project-placeholder.jpg',
-      tags: ['JavaScript', 'D3.js', 'Firebase'],
-      link: '/projects/project3',
-      github: 'https://github.com/'
+        'A very simple Kotlin mobile application that fetches data from the API Ninjas Planets API and displays it. This project was built using Android Studio.',
+      image: '/planets.png',
+      tags: ['Kotlin', 'Android Studio'],
+      link: '/projects/planets',
+      github: 'https://github.com/Rice-Cameron/kotlin-planet-app'
     }
   ];
 

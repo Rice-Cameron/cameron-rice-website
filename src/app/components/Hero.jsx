@@ -7,23 +7,33 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   return (
     <div className='relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-gray-50 pb-28 pt-32 md:pb-36 md:pt-40'>
-      {/* Enhanced decorative elements */}
+      {/* =================================
+          BACKGROUND DECORATIVE ELEMENTS
+          ================================= */}
+      {/* Large blue bubble - top right */}
       <div className='absolute -right-4 top-20 z-0 h-64 w-64 rounded-full bg-blue-100/40 blur-3xl'></div>
+      {/* Large indigo bubble - bottom left */}
       <div className='absolute -bottom-10 -left-10 z-0 h-72 w-72 rounded-full bg-indigo-50/60 blur-3xl'></div>
+      {/* Medium cyan bubble - bottom right */}
       <div className='absolute bottom-40 right-1/4 z-0 h-40 w-40 rounded-full bg-cyan-50/50 blur-2xl'></div>
+      {/* Small blue bubble - mid left */}
       <div className='absolute left-1/3 top-1/4 z-0 h-28 w-28 rounded-full bg-blue-100/30 blur-xl'></div>
 
-      {/* Grid pattern overlay */}
+      {/* Background grid pattern */}
       <div className="absolute inset-0 z-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRoLTJ2LTRoMnY0em0wLTZ2LTRoLTJ2NGgyek0zMCAzNGgtMnYtNGgydjR6bTAgLTZoLTJ2LTRoMnY0eiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+')] opacity-[0.03]"></div>
 
       <div className='container relative z-10 mx-auto px-4 md:px-6'>
         <div className='flex flex-col items-center justify-between md:flex-row'>
+          {/* =================================
+              LEFT SIDE - TEXT CONTENT AREA
+              ================================= */}
           <motion.div
             className='mb-10 md:mb-0 md:w-1/2'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
+            {/* "Web Developer" badge */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -33,6 +43,7 @@ const Hero = () => {
               Web Developer
             </motion.div>
 
+            {/* Main heading with animated underline */}
             <h1 className='mb-6 text-4xl font-bold leading-tight text-gray-900 md:text-5xl lg:text-6xl'>
               Hi, I'm{' '}
               <motion.span
@@ -42,6 +53,7 @@ const Hero = () => {
                 transition={{ duration: 0.7, delay: 0.3 }}
               >
                 Cameron Rice
+                {/* Animated underline for name */}
                 <motion.span
                   className='absolute -bottom-2 left-0 h-1 w-full rounded-full bg-blue-600/30'
                   initial={{ width: 0 }}
@@ -51,6 +63,7 @@ const Hero = () => {
               </motion.span>
             </h1>
 
+            {/* Subtitle/description paragraph */}
             <motion.p
               className='mb-8 max-w-lg text-xl leading-relaxed text-gray-600'
               initial={{ opacity: 0 }}
@@ -61,17 +74,22 @@ const Hero = () => {
               applications with modern technologies.
             </motion.p>
 
+            {/* =================================
+                CALL-TO-ACTION BUTTONS
+                ================================= */}
             <motion.div
               className='relative z-20 flex flex-wrap gap-4'
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
+              {/* "View My Work" button - Primary blue with right arrow */}
               <Link
                 href='/projects'
                 className='group inline-flex transform items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/20'
               >
                 View My Work
+                {/* Right arrow icon */}
                 <svg
                   className='ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1'
                   fill='none'
@@ -87,11 +105,14 @@ const Hero = () => {
                   />
                 </svg>
               </Link>
+
+              {/* "Resume" button - Secondary white with document icon */}
               <Link
                 href='/resume'
                 className='group inline-flex transform items-center rounded-lg border border-gray-300 bg-white px-6 py-3 font-medium text-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md'
               >
                 Resume
+                {/* Document icon */}
                 <svg
                   className='ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5'
                   fill='none'
@@ -109,15 +130,19 @@ const Hero = () => {
               </Link>
             </motion.div>
 
-            {/* Social icons */}
+            {/* =================================
+                SOCIAL MEDIA LINKS
+                ================================= */}
             <motion.div
               className='mt-10 flex items-center space-x-4'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.7 }}
             >
+              {/* GitHub social icon */}
               <a
-                href='#'
+                href='https://github.com/Rice-Cameron'
+                target='_blank'
                 className='text-gray-500 transition-colors duration-300 hover:text-blue-600'
               >
                 <svg
@@ -133,38 +158,11 @@ const Hero = () => {
                   />
                 </svg>
               </a>
+
+              {/* LinkedIn social icon */}
               <a
-                href='#'
-                className='text-gray-500 transition-colors duration-300 hover:text-blue-600'
-              >
-                <svg
-                  className='h-5 w-5'
-                  fill='currentColor'
-                  viewBox='0 0 24 24'
-                  aria-hidden='true'
-                >
-                  <path
-                    fillRule='evenodd'
-                    d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z'
-                    clipRule='evenodd'
-                  />
-                </svg>
-              </a>
-              <a
-                href='#'
-                className='text-gray-500 transition-colors duration-300 hover:text-blue-600'
-              >
-                <svg
-                  className='h-5 w-5'
-                  fill='currentColor'
-                  viewBox='0 0 24 24'
-                  aria-hidden='true'
-                >
-                  <path d='M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84' />
-                </svg>
-              </a>
-              <a
-                href='#'
+                href='https://www.linkedin.com/in/cameron-rice-03b257249/'
+                target='_blank'
                 className='text-gray-500 transition-colors duration-300 hover:text-blue-600'
               >
                 <svg
@@ -183,49 +181,45 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
+          {/* =================================
+              RIGHT SIDE - PROFILE IMAGE AREA
+              ================================= */}
           <motion.div
             className='md:w-2/5'
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
+            {/* Profile container with hover effect */}
             <motion.div
               className='relative mx-auto h-64 w-64 md:h-80 md:w-80'
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
             >
+              {/* Profile background elements */}
+              {/* Main circular background with gradient */}
               <div className='absolute inset-0 rounded-full bg-gradient-to-br from-blue-100 via-white to-blue-50 shadow-xl'></div>
+              {/* Blurred halo/glow effect */}
               <div className='absolute -inset-0.5 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 opacity-10 blur-md'></div>
+              {/* Inner background with blur effect */}
               <div className='absolute inset-2 rounded-full bg-white/90 backdrop-blur-sm'></div>
 
-              <div className='absolute inset-0 flex items-center justify-center rounded-full border-4 border-white bg-gray-200 shadow-lg'>
-                <svg
-                  className='h-32 w-32 text-gray-400/80'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    fillRule='evenodd'
-                    d='M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z'
-                    clipRule='evenodd'
-                  />
-                </svg>
+              {/* Profile image - Using your headshot photo */}
+              <div className='absolute inset-0 overflow-hidden rounded-full border-4 border-white shadow-lg'>
+                <Image
+                  src='/headshotpfp.jpeg'
+                  alt='Cameron Rice'
+                  fill
+                  className='object-cover'
+                  priority
+                  unoptimized
+                />
               </div>
 
-              {/* Uncomment and add your image when ready */}
-              {/* 
-              <Image 
-                src="/your-profile-image.jpg" 
-                alt="Cameron Rice" 
-                fill
-                className="object-cover rounded-full"
-                priority
-                unoptimized
-              /> 
-              */}
-
-              {/* Floating elements */}
+              {/* =================================
+                  DECORATIVE SKILL ICONS
+                  ================================= */}
+              {/* Settings/gear icon - bottom right */}
               <motion.div
                 className='absolute -bottom-4 -right-2 h-14 w-14 rounded-full bg-blue-600 p-3 shadow-lg'
                 initial={{ y: 20, opacity: 0 }}
@@ -254,6 +248,7 @@ const Hero = () => {
                 </svg>
               </motion.div>
 
+              {/* Design/paint brush icon - top left */}
               <motion.div
                 className='absolute -left-4 top-5 h-12 w-12 rounded-full bg-indigo-500 p-3 shadow-lg'
                 initial={{ y: -20, opacity: 0 }}
