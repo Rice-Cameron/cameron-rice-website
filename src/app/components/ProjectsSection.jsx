@@ -47,7 +47,7 @@ const ProjectsSection = () => {
           </h2>
           <p className='mx-auto max-w-3xl text-xl text-gray-600'>
             Here are some of my recent works that showcase my skills and
-            experience in web development.
+            experience in web and mobile development.
           </p>
         </motion.div>
 
