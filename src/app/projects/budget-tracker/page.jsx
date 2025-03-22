@@ -32,7 +32,7 @@ export default function BudgetTracker() {
         </div>
 
         <div className='mb-10 grid grid-cols-1 gap-8 md:grid-cols-2'>
-          <div>
+          {/* <div>
             <h2 className='mb-4 text-2xl font-bold text-gray-900'>
               About this project
             </h2>
@@ -42,7 +42,7 @@ export default function BudgetTracker() {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-          </div>
+          </div> */}
           <div>
             <h2 className='mb-4 text-2xl font-bold text-gray-900'>
               Technologies Used
