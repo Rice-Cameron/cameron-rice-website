@@ -52,23 +52,62 @@ const ResumeSectionContainer = () => {
             title='Experience'
             items={[
               {
-                title: 'Software Engineering Intern',
+                title: 'Software Engineer',
                 organization: 'Zeek Interactive Inc.',
-                period: 'Jun 2024 - Sept 2024',
+                period: 'May 2024 - September 2024',
                 description: [
-                  'Developed applications using Laravel and FilamentPHP.',
-                  'Collaborated with teams to create high-quality software solutions.',
-                  'Enhanced workplace communication and teamwork skills.'
+                  'Developed and maintained Laravel and FilamentPHP applications, improving client efficiency.',
+                  'Designed and integrated dynamic FilamentPHP dashboards, enhancing user experience for over 200+ users.',
+                  'Collaborated with a team of engineers to deliver scalable software solutions, reducing backend load times.',
+                  'Refactored legacy codebases, cutting technical debt and boosting maintainability.',
+                  'Created and optimized backend services for high-traffic applications, supporting thousands of daily requests.',
+                  'Built and deployed RESTful APIs, enabling seamless integrations with third-party services.'
                 ]
               },
               {
-                title: 'QA Support Intern',
+                title: 'QA Engineer',
                 organization: 'Zeek Interactive Inc.',
-                period: 'Jun 2023 - Sept 2023',
+                period: 'May 2023 - September 2023',
                 description: [
-                  'Created API endpoints.',
-                  'Verified pages for cross-browser compatibility.',
-                  'Ensured the quality of new features.'
+                  'Conducted automated and manual testing, reducing production bugs.',
+                  'Led cross-browser compatibility testing, ensuring validity across multiple platforms.',
+                  'Debugged and verified new feature releases, improving overall software stability.',
+                  'Identified and documented critical bugs, collaborating with developers to implement fixes.',
+                  'Partnered with developers to triage and resolve high-priority production issues.'
+                ]
+              }
+            ]}
+          />
+
+          {/* Projects Section */}
+          <ResumeSection
+            title='Projects'
+            items={[
+              {
+                title: 'Lavender - Shift Work Sleep Management App',
+                organization: '',
+                period: '',
+                description: [
+                  'Project Manager leading a team of five developers, overseeing development cycles and timelines.',
+                  'Integrated Google Firebase services (Authentication, Firestore, Cloud Functions) with a React frontend, automating scheduling for shift workers.',
+                  'Partnered with a sleep psychology expert to ensure scheduling recommendations align with research-backed methodologies.'
+                ]
+              },
+              {
+                title: 'Work Projects - Internal Dashboard & EHR Software',
+                organization: '',
+                period: '',
+                description: [
+                  'Developed FilamentPHP-powered internal dashboards, enabling partners to track project statuses in real-time.',
+                  'Built an Electronic Health Records (EHR) application for a major medical technology company, streamlining patient data management and increasing efficiency.'
+                ]
+              },
+              {
+                title: 'Personal Blog - React/Next.js App',
+                organization: '',
+                period: '',
+                description: [
+                  'Designed and developed a full-stack blog application using React and Next.js, allowing dynamic content updates with an optimized UI/UX.'
                 ]
               }
             ]}
@@ -81,10 +120,11 @@ const ResumeSectionContainer = () => {
               {
                 title: 'B.S. Computer Science',
                 organization: 'Oregon State University',
-                period: '2021 - Present',
+                period: 'September 2021 - Present',
                 description: [
                   'GPA: 3.88',
-                  'Concentration: Web and Mobile Application Development'
+                  'Concentration: Web and Mobile Application Development',
+                  'Relevant Courses: Web Development, Mobile App Development, Cloud App Development, Databases, Software Engineering I/II, Data Structures, Analysis of Algorithms'
                 ]
               }
             ]}
@@ -109,28 +149,32 @@ const ResumeSectionContainer = () => {
             >
               <SkillCategory
                 title='Languages'
-                skills={['PHP', 'JavaScript', 'Python', 'C/C++']}
+                skills={['PHP', 'JavaScript', 'Python', 'C/C++', 'Kotlin']}
               />
 
               <SkillCategory
                 title='Tools & Frameworks'
-                skills={['Laravel', 'React & NextJS', 'Git & GitHub', 'MySQL']}
+                skills={[
+                  'Laravel',
+                  'FilamentPHP',
+                  'ReactJS',
+                  'NodeJS',
+                  'NextJS',
+                  'Google Firebase',
+                  'Git & GitHub',
+                  'MySQL',
+                  'MongoDB'
+                ]}
               />
 
               <SkillCategory
                 title='Soft Skills'
-                skills={['Communication', 'Problem-Solving', 'Time Management']}
-              />
-
-              <SkillCategory
-                title='Relevant Courses'
                 skills={[
-                  'Web Development',
-                  'Mobile App Development',
-                  'Software Engineering I/II',
-                  'Database Management Systems',
-                  'Data Structures & Algorithms',
-                  'Usability Engineering'
+                  'Communication',
+                  'Problem-Solving',
+                  'Time Management',
+                  'Strong Work Ethic',
+                  'Critical Thinking'
                 ]}
               />
             </motion.div>
