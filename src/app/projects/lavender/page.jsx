@@ -30,17 +30,20 @@ export default function Lavender() {
         </div>
 
         <div className='mb-10 grid grid-cols-1 gap-8 md:grid-cols-2'>
-          {/* <div>
+          <div>
             <h2 className='mb-4 text-2xl font-bold text-gray-900'>
               About this project
             </h2>
             <p className='text-gray-600'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              This is my current and on-going Senior Capstone project at Oregon
+              State University. The project is aimed to help those who suffer
+              from Shift Work Sleep Disorder. The application will allow users
+              to track their sleep patterns and provide them with personalized
+              recommendations to improve their sleep quality. We are working
+              closely with a sleep specialist to ensure the application is
+              effective and beneficial for those who use it.
             </p>
-          </div> */}
+          </div>
           <div>
             <h2 className='mb-4 text-2xl font-bold text-gray-900'>
               Technologies Used

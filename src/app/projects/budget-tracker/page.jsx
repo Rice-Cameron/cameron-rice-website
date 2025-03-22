@@ -32,17 +32,19 @@ export default function BudgetTracker() {
         </div>
 
         <div className='mb-10 grid grid-cols-1 gap-8 md:grid-cols-2'>
-          {/* <div>
+          <div>
             <h2 className='mb-4 text-2xl font-bold text-gray-900'>
               About this project
             </h2>
             <p className='text-gray-600'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              This was a simple final project from my Web Development course at
+              Oregon State University (CS290). The project was built using
+              Node.js and Handlebars. It was a great introduction to web
+              development and I learned a lot about the basics of web
+              development. It takes in user input for expenses and income and
+              displays the total balance.
             </p>
-          </div> */}
+          </div>
           <div>
             <h2 className='mb-4 text-2xl font-bold text-gray-900'>
               Technologies Used
