@@ -81,6 +81,7 @@ export default function Planets() {
           </button>
           <Link
             href='https://github.com/Rice-Cameron/kotlin-planet-app'
+            target='_blank'
             className='inline-flex items-center rounded-lg border border-gray-300 px-6 py-3 font-medium text-gray-700 transition-colors duration-200 hover:border-gray-400'
           >
             View Code
