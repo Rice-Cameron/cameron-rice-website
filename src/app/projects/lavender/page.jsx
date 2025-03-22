@@ -57,16 +57,6 @@ export default function Lavender() {
           </div>
         </div>
 
-        <div className='mb-10'>
-          <h2 className='mb-4 text-2xl font-bold text-gray-900'>Features</h2>
-          <ul className='list-disc space-y-2 pl-5 text-gray-600'>
-            <li>Responsive design that works on all devices</li>
-            <li>User authentication and authorization</li>
-            <li>Interactive data visualization</li>
-            <li>Google Firebase SDK integration</li>
-          </ul>
-        </div>
-
         <div className='flex flex-wrap gap-4'>
           <Link
             href='https://lavender-sleep.web.app/'
