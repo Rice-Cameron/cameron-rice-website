@@ -70,8 +70,8 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Web Developer specializing in creating responsive, user-friendly
-              applications with modern technologies.
+              Backend Web Developer specializing in building scalable,
+              efficient, and secure web applications with modern technologies.
             </motion.p>
 
             {/* =================================
