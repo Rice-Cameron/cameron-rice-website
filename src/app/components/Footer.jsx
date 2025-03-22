@@ -87,7 +87,7 @@ const Footer = () => {
                 </svg>
                 <span className='text-gray-400'>cameron5237@gmail.com</span>
               </li>
-              <li className='flex items-start'>
+              {/* <li className='flex items-start'>
                 <svg
                   className='mr-2 mt-0.5 h-5 w-5 text-gray-400'
                   fill='none'
@@ -103,7 +103,7 @@ const Footer = () => {
                   />
                 </svg>
                 <span className='text-gray-400'>(503) 277-9403</span>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
