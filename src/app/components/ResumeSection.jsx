@@ -21,7 +21,7 @@ const ResumeSectionContainer = () => {
 
           <div className='mt-8'>
             <a
-              href='/CameronRiceRESUME.pdf'
+              href='/CameronRice2025.pdf'
               download
               className='inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-blue-700'
               target='_blank'

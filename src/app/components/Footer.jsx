@@ -16,9 +16,14 @@ const Footer = () => {
             </p>
             <div className='flex space-x-4'>
               {/* Social media icons */}
-              <SocialLink href='https://github.com/' icon='github' />
-              <SocialLink href='https://linkedin.com/in/' icon='linkedin' />
-              <SocialLink href='https://twitter.com/' icon='twitter' />
+              <SocialLink
+                href='https://github.com/Rice-Cameron'
+                icon='github'
+              />
+              <SocialLink
+                href='https://www.linkedin.com/in/cameron-rice-03b257249/'
+                icon='linkedin'
+              />
             </div>
           </div>
 
