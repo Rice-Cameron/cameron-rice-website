@@ -43,23 +43,28 @@ const AboutSection = () => {
             </h2>
             <div className='space-y-6 text-gray-600'>
               <p>
-                Hi! I'm Cameron Rice, a web developer with a passion for
-                creating dynamic and responsive web applications. My journey in
-                web development began during my studies at Oregon State
-                University, where I discovered my enthusiasm for turning ideas
-                into functional, beautiful websites.
+                Hi! I'm Cameron Rice, a backend-focused web developer with a
+                passion for building scalable and efficient web applications. My
+                journey in web development began during my studies at Oregon
+                State University, where I developed a strong interest in
+                designing robust backend systems that power dynamic and
+                responsive applications.
               </p>
               <p>
-                Throughout my academic and professional career, I've worked with
-                various technologies including JavaScript, React, and Next.js,
-                constantly expanding my skill set to stay at the forefront of
-                web development trends.
+                Throughout my academic and professional career, I've worked
+                extensively with technologies like PHP, Laravel, JavaScript,
+                Node.js, and MySQL, specializing in authentication, database
+                management, and API development. I also have experience with
+                React and Next.js, allowing me to bridge backend functionality
+                with frontend performance.
               </p>
               <p>
-                My internship experiences at Zeek Interactive have provided me
-                with practical knowledge in developing real-world applications,
-                collaborating with teams, and delivering high-quality software
-                solutions to clients.
+                My internship experiences at Zeek Interactive have given me
+                hands-on experience in developing real-world applications,
+                ensuring backend stability, optimizing performance, and
+                collaborating with teams to deliver high-quality software
+                solutions. I'm always eager to explore new technologies and best
+                practices to refine my backend development expertise.
               </p>
             </div>
           </motion.div>
