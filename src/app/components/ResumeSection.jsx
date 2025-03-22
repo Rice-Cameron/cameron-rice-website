@@ -103,11 +103,11 @@ const ResumeSectionContainer = () => {
                 ]
               },
               {
-                title: 'Personal Blog - React/Next.js App',
+                title: 'Portfolio Website - React/Next.js App',
                 organization: '',
                 period: '',
                 description: [
-                  'Designed and developed a full-stack blog application using React and Next.js, allowing dynamic content updates with an optimized UI/UX.'
+                  'Designed and developed a portfolio website using Next.js, optimized for UI/UX with a focus on clean, responsive design.'
                 ]
               }
             ]}
