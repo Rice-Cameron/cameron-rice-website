@@ -30,6 +30,15 @@ const ProjectsSection = () => {
       tags: ['Kotlin', 'Android Studio'],
       link: '/projects/planets',
       github: 'https://github.com/Rice-Cameron/kotlin-planet-app'
+    },
+    {
+      title: 'API Rate Limiter Microservice',
+      description:
+        'A production-ready backend microservice for API rate limiting using the Token Bucket algorithm and Redis. Designed for high performance, clarity, and easy integration. Features global and per-client rate limits, REST API endpoints, configurable environment variables, and Docker support for seamless deployment.',
+      image: '/rate-limit.png',
+      tags: ['Go', 'Redis', 'Docker', 'Microservices', 'API'],
+      link: '/projects/api-rate-limiter-microservice',
+      github: 'https://github.com/Rice-Cameron/api-rate-limiter-microservice'
     }
   ];
 
