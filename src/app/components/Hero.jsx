@@ -33,14 +33,14 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {/* "Web Developer" badge */}
+            {/* Title badge */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className='mb-2 inline-block rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-600 shadow-sm ring-1 ring-blue-100'
             >
-              Web Developer
+              Backend Engineer
             </motion.div>
 
             {/* Main heading with animated underline */}
@@ -70,8 +70,8 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Backend Web Developer specializing in building scalable,
-              efficient, and secure web applications with modern technologies.
+              Backend Software Engineer specializing in building scalable,
+              efficient, and secure applications with modern technologies.
             </motion.p>
 
             {/* =================================

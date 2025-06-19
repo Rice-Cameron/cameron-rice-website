@@ -10,17 +10,17 @@ const ProjectsSection = () => {
       description:
         'A responsive web application with modern UI/UX design principles. Built using React.js and Google Firebase, aimed to help the lives of those who suffer from Shift Work Sleep Disorder.',
       image: '/lavender.png',
-      tags: ['React', 'Firebase', 'Vite'],
+      tags: ['Firebase', 'React', 'JavaScript', 'Vite'],
       link: '/projects/lavender'
     },
     {
-      title: 'Budget Tracker',
+      title: 'Automated Minecraft Server Deployment',
       description:
-        'One of my first ever projects that I built using vanilla JavaScript. It is a simple budget tracker that helps users keep track of their expenses and income.',
-      image: '/budget-tracker.png',
-      tags: ['JavaScript', 'HTML', 'CSS', 'Handlebars', 'Node.js'],
-      link: '/projects/budget-tracker',
-      github: 'https://github.com/Rice-Cameron/js-budget-tracker'
+        'This project demonstrates modern DevOps practices by automating the deployment and configuration of a Minecraft server on AWS. Using Terraform and Ansible, it provisions cloud resources and configures the server with minimal manual intervention. The solution includes secure key management, automated provisioning, and step-by-step deployment instructions.',
+      image: '/devops.svg',
+      tags: ['Terraform', 'Ansible', 'AWS', 'EC2', 'DevOps'],
+      link: '/projects/minecraft-server-deployment',
+      github: 'https://github.com/Rice-Cameron/CS312CourseProjectPt2'
     },
     {
       title: 'Planet API Mobile App',

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function BudgetTracker() {
+export default function MinecraftServerDeployment() {
   return (
     <div className='container mx-auto px-4 py-20 md:px-6'>
       <motion.div
@@ -13,21 +13,27 @@ export default function BudgetTracker() {
         transition={{ duration: 0.5 }}
       >
         <h1 className='mb-6 text-4xl font-bold text-gray-900'>
-          Budget Tracker
+          Automated Minecraft Server Deployment
         </h1>
         <p className='mb-8 text-lg text-gray-600'>
-          One of my first ever projects that I built using vanilla JavaScript.
-          It is a simple budget tracker that helps users keep track of their
-          expenses and income.
+          This project demonstrates modern DevOps practices by automating the
+          deployment and configuration of a Minecraft server on AWS. Using
+          Infrastructure as Code (Terraform) and Configuration Management
+          (Ansible), the process provisions cloud resources and configures the
+          server with minimal manual intervention. The solution includes secure
+          key management, automated provisioning, and step-by-step deployment
+          instructions. It serves as a practical example of leveraging
+          automation tools to streamline cloud infrastructure and application
+          setup.
         </p>
 
         <div className='mb-12 flex h-96 w-full items-center justify-center rounded-lg bg-gray-200 text-gray-400'>
           <Image
             className='h-96 w-full rounded-lg object-contain'
-            src='/budget-tracker.png'
+            src='/devops.svg'
             width={384}
             height={384}
-            alt='Budget Tracker'
+            alt='Automated Minecraft Server Deployment'
           />
         </div>
 
@@ -37,12 +43,12 @@ export default function BudgetTracker() {
               About this project
             </h2>
             <p className='text-gray-600'>
-              This was a simple final project from my Web Development course at
-              Oregon State University (CS290). The project was built using
-              Node.js and Handlebars. It was a great introduction to web
-              development and I learned a lot about the basics of web
-              development. It takes in user input for expenses and income and
-              displays the total balance.
+              The project uses Terraform to provision AWS infrastructure and
+              Ansible to configure the Minecraft server on an EC2 instance. It
+              features automated SSH key management, secure deployment, and
+              clear instructions for both setup and teardown. This approach
+              highlights best practices in DevOps and cloud automation, making
+              it easy to deploy, manage, and destroy cloud resources as needed.
             </p>
           </div>
           <div>
@@ -50,18 +56,18 @@ export default function BudgetTracker() {
               Technologies Used
             </h2>
             <ul className='list-disc space-y-1 pl-5 text-gray-600'>
-              <li>Node.JS</li>
-              <li>JavaScript</li>
-              <li>CSS</li>
-              <li>HTML</li>
-              <li>Handlebars</li>
+              <li>Terraform</li>
+              <li>Ansible</li>
+              <li>AWS</li>
+              <li>EC2</li>
+              <li>DevOps</li>
             </ul>
           </div>
         </div>
 
         <div className='flex flex-wrap gap-4'>
           <Link
-            href='https://github.com/Rice-Cameron/js-budget-tracker'
+            href='https://github.com/Rice-Cameron/CS312CourseProjectPt2'
             target='_blank'
             className='inline-flex items-center rounded-lg border border-gray-300 px-6 py-3 font-medium text-gray-700 transition-colors duration-200 hover:border-gray-400'
           >

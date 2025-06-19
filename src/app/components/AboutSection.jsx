@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   const skills = [
-    { name: 'JavaScript', level: 85 },
+    { name: 'JavaScript', level: 90 },
     { name: 'React', level: 75 },
     { name: 'Next.js', level: 65 },
-    { name: 'Node.js', level: 75 },
+    { name: 'Node.js', level: 85 },
     { name: 'PHP/Laravel', level: 80 },
-    { name: 'HTML/CSS', level: 85 },
+    { name: 'AWS/Terraform/Ansible', level: 65 },
     { name: 'SQL', level: 80 },
     { name: 'Git', level: 90 }
   ];
@@ -27,8 +27,9 @@ const AboutSection = () => {
             About Me
           </h1>
           <p className='text-xl text-gray-600'>
-            Passionate web developer with expertise in modern technologies and a
-            focus on creating exceptional user experiences.
+            Aspiring backend software engineer with a strong foundation in web
+            technologies, passionate about building scalable systems and APIs
+            using Node.js, Laravel, and cloud platforms.
           </p>
         </motion.div>
 
@@ -43,28 +44,30 @@ const AboutSection = () => {
             </h2>
             <div className='space-y-6 text-gray-600'>
               <p>
-                Hi! I'm Cameron Rice, a backend-focused web developer with a
-                passion for building scalable and efficient web applications. My
-                journey in web development began during my studies at Oregon
-                State University, where I developed a strong interest in
-                designing robust backend systems that power dynamic and
+                Hi! I'm Cameron Rice, an aspiring backend software engineer with
+                a passion for building scalable and efficient applications. My
+                journey in software and web development began during my studies
+                at Oregon State University, where I developed a strong interest
+                in designing robust backend systems that power dynamic and
                 responsive applications.
               </p>
               <p>
-                Throughout my academic and professional career, I've worked
-                extensively with technologies like PHP, Laravel, JavaScript,
-                Node.js, and MySQL, specializing in authentication, database
-                management, and API development. I also have experience with
-                React and Next.js, allowing me to bridge backend functionality
-                with frontend performance.
+                Throughout the beginnings of my academic and professional
+                career, I've already worked extensively with backend
+                technologies like PHP (Laravel), JavaScript (Node.js), and
+                MySQL, specializing in authentication, database management, API
+                development, and cloud automation. I also have experience with
+                React and Next.js, but my primary focus and interest is in
+                backend engineering and infrastructure.
               </p>
               <p>
                 My internship experiences at Zeek Interactive have given me
-                hands-on experience in developing real-world applications,
-                ensuring backend stability, optimizing performance, and
-                collaborating with teams to deliver high-quality software
-                solutions. I'm always eager to explore new technologies and best
-                practices to refine my backend development expertise.
+                hands-on experience in developing real-world backend
+                applications, ensuring system stability, optimizing performance,
+                and collaborating with teams to deliver high-quality software
+                solutions. I'm always eager to explore new backend technologies,
+                cloud platforms, and best practices to refine my expertise as a
+                backend engineer.
               </p>
             </div>
           </motion.div>

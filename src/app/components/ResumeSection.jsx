@@ -120,9 +120,9 @@ const ResumeSectionContainer = () => {
               {
                 title: 'B.S. Computer Science',
                 organization: 'Oregon State University',
-                period: 'September 2021 - Present',
+                period: 'September 2021 - June 2025',
                 description: [
-                  'GPA: 3.88',
+                  'GPA: 3.89',
                   'Concentration: Web and Mobile Application Development',
                   'Relevant Courses: Web Development, Mobile App Development, Cloud App Development, Databases, Software Engineering I/II, Data Structures, Analysis of Algorithms'
                 ]
