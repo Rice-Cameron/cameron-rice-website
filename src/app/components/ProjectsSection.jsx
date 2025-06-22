@@ -39,6 +39,22 @@ const ProjectsSection = () => {
       tags: ['Go', 'Redis', 'Docker', 'Microservices', 'API'],
       link: '/projects/api-rate-limiter-microservice',
       github: 'https://github.com/Rice-Cameron/api-rate-limiter-microservice'
+    },
+    {
+      title: 'Time-Tracked Invoice Generator',
+      description:
+        'A comprehensive Django-based backend service that allows freelancers to manage clients, track time, and generate professional invoices with PDF generation and Stripe payment integration. Features include client management, project tracking, time logging, recurring invoices, and automated email notifications.',
+      image: '/django.png',
+      tags: [
+        'Python',
+        'Django',
+        'REST API',
+        'Stripe',
+        'PDF Generation',
+        'Celery'
+      ],
+      link: '/projects/invoice-generator',
+      github: 'https://github.com/cameron-rice/invoice-generator'
     }
   ];
 
