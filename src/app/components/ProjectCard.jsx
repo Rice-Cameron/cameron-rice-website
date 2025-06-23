@@ -47,22 +47,23 @@ const ProjectCard = ({
         )}
       </div>
 
-      <div className='p-5'>
-        <h3 className='mb-2 text-xl font-bold text-gray-900'>{title}</h3>
-        <p className='mb-4 line-clamp-3 text-gray-600'>{description}</p>
+      <div className='flex min-h-[300px] flex-col'>
+        <div className='flex-grow p-4 md:p-5'>
+          <h3 className='mb-2 text-xl font-bold text-gray-900'>{title}</h3>
+          <p className='mb-4 line-clamp-3 text-gray-600'>{description}</p>
 
-        <div className='mb-4 flex flex-wrap gap-2'>
-          {tags.map((tag, index) => (
-            <span
-              key={index}
-              className='rounded-full bg-blue-50 px-2 py-1 text-xs font-medium text-blue-600'
-            >
-              {tag}
-            </span>
-          ))}
+          <div className='flex flex-wrap justify-start gap-2'>
+            {tags.map((tag, index) => (
+              <span
+                key={index}
+                className='rounded-full bg-blue-50 px-2 py-1 text-sm font-medium text-blue-600'
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
-
-        <div className='flex space-x-3'>
+        <div className='flex space-x-2 px-4 pb-4 md:space-x-3 md:px-5 md:pb-5'>
           {link && (
             <Link
               href={link}

@@ -87,15 +87,16 @@ const ProjectsSection = () => {
 
         <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
           {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              tags={project.tags}
-              link={project.link}
-              github={project.github}
-            />
+            <div key={index} className='h-full'>
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                tags={project.tags}
+                link={project.link}
+                github={project.github}
+              />
+            </div>
           ))}
         </div>
       </div>
