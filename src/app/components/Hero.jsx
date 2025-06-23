@@ -40,7 +40,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className='mb-2 inline-block rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-600 shadow-sm ring-1 ring-blue-100'
             >
-              Backend Engineer
+              Backend Web Engineer
             </motion.div>
 
             {/* Main heading with animated underline */}
