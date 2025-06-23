@@ -54,7 +54,16 @@ const ProjectsSection = () => {
         'Celery'
       ],
       link: '/projects/invoice-generator',
-      github: 'https://github.com/cameron-rice/invoice-generator'
+      github: 'https://github.com/Rice-Cameron/invoice-generator'
+    },
+    {
+      title: 'LeetLog',
+      description:
+        "A modern web application for tracking and organizing your LeetCode problem solving journey. LeetLog helps you keep track of the problems you've solved, your solutions, and important metadata like time and space complexity.",
+      image: '/leetlog.png',
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'SQLite'],
+      link: '/projects/leetlog',
+      github: 'https://github.com/Rice-Cameron/LeetLog'
     }
   ];
 
