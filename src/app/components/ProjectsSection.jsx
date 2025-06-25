@@ -14,22 +14,19 @@ const ProjectsSection = () => {
       link: '/projects/lavender'
     },
     {
-      title: 'Automated Minecraft Server Deployment',
+      title: 'LeetLog',
       description:
-        'This project demonstrates modern DevOps practices by automating the deployment and configuration of a Minecraft server on AWS. Using Terraform and Ansible, it provisions cloud resources and configures the server with minimal manual intervention. The solution includes secure key management, automated provisioning, and step-by-step deployment instructions.',
-      image: '/devops.svg',
-      tags: ['Terraform', 'Ansible', 'AWS', 'EC2', 'DevOps'],
-      link: '/projects/minecraft-server-deployment',
-      github: 'https://github.com/Rice-Cameron/CS312CourseProjectPt2'
-    },
-    {
-      title: 'Planet API Mobile App',
-      description:
-        'A very simple Kotlin mobile application that fetches data from the API Ninjas Planets API and displays it. This project was built using Android Studio.',
-      image: '/planets.png',
-      tags: ['Kotlin', 'Android Studio'],
-      link: '/projects/planets',
-      github: 'https://github.com/Rice-Cameron/kotlin-planet-app'
+        "A modern web application for tracking and organizing your LeetCode problem solving journey. LeetLog helps you keep track of the problems you've solved, your solutions, and important metadata like time and space complexity.",
+      image: '/leetlog.png',
+      tags: [
+        'Next.js',
+        'TypeScript',
+        'Tailwind CSS',
+        'Prisma',
+        'Neon (PostgreSQL)'
+      ],
+      link: '/projects/leetlog',
+      github: 'https://github.com/Rice-Cameron/LeetLog'
     },
     {
       title: 'API Rate Limiter Microservice',
@@ -57,13 +54,22 @@ const ProjectsSection = () => {
       github: 'https://github.com/Rice-Cameron/invoice-generator'
     },
     {
-      title: 'LeetLog',
+      title: 'Automated Minecraft Server Deployment',
       description:
-        "A modern web application for tracking and organizing your LeetCode problem solving journey. LeetLog helps you keep track of the problems you've solved, your solutions, and important metadata like time and space complexity.",
-      image: '/leetlog.png',
-      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'SQLite'],
-      link: '/projects/leetlog',
-      github: 'https://github.com/Rice-Cameron/LeetLog'
+        'This project demonstrates modern DevOps practices by automating the deployment and configuration of a Minecraft server on AWS. Using Terraform and Ansible, it provisions cloud resources and configures the server with minimal manual intervention. The solution includes secure key management, automated provisioning, and step-by-step deployment instructions.',
+      image: '/devops.svg',
+      tags: ['Terraform', 'Ansible', 'AWS', 'EC2', 'DevOps'],
+      link: '/projects/minecraft-server-deployment',
+      github: 'https://github.com/Rice-Cameron/CS312CourseProjectPt2'
+    },
+    {
+      title: 'Planet API Mobile App',
+      description:
+        'A very simple Kotlin mobile application that fetches data from the API Ninjas Planets API and displays it. This project was built using Android Studio.',
+      image: '/planets.png',
+      tags: ['Kotlin', 'Android Studio'],
+      link: '/projects/planets',
+      github: 'https://github.com/Rice-Cameron/kotlin-planet-app'
     }
   ];
 

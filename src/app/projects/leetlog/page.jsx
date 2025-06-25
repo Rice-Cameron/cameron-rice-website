@@ -32,22 +32,43 @@ export default function LeetLog() {
 
         <div className='mb-10 grid grid-cols-1 gap-8 md:grid-cols-2'>
           <div>
-            <h2 className='mb-4 text-2xl font-bold text-gray-900'>About this project</h2>
+            <h2 className='mb-4 text-2xl font-bold text-gray-900'>
+              About this project
+            </h2>
             <p className='text-gray-600'>
-              LeetLog is a modern web application designed to help developers track and organize their LeetCode problem solving journey. Built with Next.js and TypeScript, it provides a clean, intuitive interface for managing problem solutions, notes, and metadata.
+              LeetLog is a modern web application designed to help developers
+              track and organize their LeetCode problem solving journey. Built
+              with Next.js and TypeScript, it provides a clean, intuitive
+              interface for managing problem solutions, notes, and metadata.
             </p>
             <p className='mt-4 text-gray-600'>
-              The application features a comprehensive form for capturing all aspects of problem solving, including solution approaches, challenges faced, time and space complexity analysis, and categorization. It also includes a dashboard for viewing and filtering problems by various criteria.
+              The application features a comprehensive form for capturing all
+              aspects of problem solving, including solution approaches,
+              challenges faced, time and space complexity analysis, and
+              categorization. It also includes a dashboard for viewing and
+              filtering problems by various criteria.
             </p>
           </div>
           <div>
-            <h2 className='mb-4 text-2xl font-bold text-gray-900'>Technologies Used</h2>
+            <h2 className='mb-4 text-2xl font-bold text-gray-900'>
+              Technologies Used
+            </h2>
             <div className='flex flex-wrap gap-2'>
-              <span className='rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800'>Next.js</span>
-              <span className='rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800'>TypeScript</span>
-              <span className='rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800'>Tailwind CSS</span>
-              <span className='rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800'>Prisma</span>
-              <span className='rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800'>SQLite</span>
+              <span className='rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800'>
+                Next.js
+              </span>
+              <span className='rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800'>
+                TypeScript
+              </span>
+              <span className='rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800'>
+                Tailwind CSS
+              </span>
+              <span className='rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800'>
+                Prisma
+              </span>
+              <span className='rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800'>
+                Neon (PostgreSQL)
+              </span>
             </div>
           </div>
         </div>
@@ -64,8 +85,28 @@ export default function LeetLog() {
             <li>Modern, responsive UI with dark mode support</li>
           </ul>
         </div>
-
         <div className='flex flex-wrap gap-4'>
+          <Link
+            href='https://leetlog-livid.vercel.app/'
+            target='_blank'
+            className='inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-blue-700'
+          >
+            View Live Demo
+            <svg
+              className='ml-2 h-5 w-5'
+              fill='none'
+              stroke='currentColor'
+              viewBox='0 0 24 24'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth={2}
+                d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
+              />
+            </svg>
+          </Link>
           <Link
             href='https://github.com/Rice-Cameron/LeetLog'
             target='_blank'
