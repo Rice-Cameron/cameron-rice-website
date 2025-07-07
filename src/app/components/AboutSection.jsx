@@ -9,6 +9,7 @@ const AboutSection = () => {
     { name: 'Next.js', level: 65 },
     { name: 'Node.js', level: 85 },
     { name: 'PHP/Laravel', level: 80 },
+    { name: 'WordPress', level: 70 },
     { name: 'AWS/Terraform/Ansible', level: 65 },
     { name: 'SQL', level: 80 },
     { name: 'Git', level: 90 }
@@ -63,8 +64,9 @@ const AboutSection = () => {
               <p>
                 My internship experiences at Zeek Interactive have given me
                 hands-on experience in developing real-world backend
-                applications, ensuring system stability, optimizing performance,
-                and collaborating with teams to deliver high-quality software
+                applications, including WordPress and Laravel development,
+                ensuring system stability, optimizing performance, and
+                collaborating with teams to deliver high-quality software
                 solutions. I'm always eager to explore new backend technologies,
                 cloud platforms, and best practices to refine my expertise as a
                 backend engineer.
