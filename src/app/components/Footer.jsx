@@ -21,7 +21,7 @@ const Footer = () => {
                 icon='github'
               />
               <SocialLink
-                href='https://www.linkedin.com/in/cameron-rice-03b257249/'
+                href='https://www.linkedin.com/in/rice-cameron/'
                 icon='linkedin'
               />
             </div>

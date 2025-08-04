@@ -21,7 +21,7 @@ const ResumeSectionContainer = () => {
 
           <div className='mt-8'>
             <a
-              href='/CameronRice2025.pdf'
+              href='/2025CameronRiceResume.pdf'
               download
               className='inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-blue-700'
               target='_blank'
@@ -122,7 +122,7 @@ const ResumeSectionContainer = () => {
                 organization: 'Oregon State University',
                 period: 'September 2021 - June 2025',
                 description: [
-                  'GPA: 3.89',
+                  'GPA: 3.90',
                   'Concentration: Web and Mobile Application Development',
                   'Relevant Courses: Web Development, Mobile App Development, Cloud App Development, Databases, Software Engineering I/II, Data Structures, Analysis of Algorithms'
                 ]

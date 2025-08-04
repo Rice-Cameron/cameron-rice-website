@@ -28,7 +28,7 @@ const AboutSection = () => {
             About Me
           </h1>
           <p className='text-xl text-gray-600'>
-            Aspiring backend software engineer with a strong foundation in web
+            Software engineer with a strong foundation in web
             technologies, passionate about building scalable systems and APIs
             using Node.js, Laravel, and cloud platforms.
           </p>
@@ -45,7 +45,7 @@ const AboutSection = () => {
             </h2>
             <div className='space-y-6 text-gray-600'>
               <p>
-                Hi! I'm Cameron Rice, an aspiring backend software engineer with
+                Hi! I'm Cameron Rice, a software engineer with
                 a passion for building scalable and efficient applications. My
                 journey in software and web development began during my studies
                 at Oregon State University, where I developed a strong interest

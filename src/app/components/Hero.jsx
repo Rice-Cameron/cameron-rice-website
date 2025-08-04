@@ -40,7 +40,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className='mb-2 inline-block rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-600 shadow-sm ring-1 ring-blue-100'
             >
-              Backend Web Engineer
+              Software Engineer
             </motion.div>
 
             {/* Main heading with animated underline */}
@@ -70,8 +70,8 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Backend Software Engineer specializing in building scalable,
-              efficient, and secure applications with modern technologies.
+              Software Engineer specializing in building scalable, efficient,
+              and secure applications with modern technologies.
             </motion.p>
 
             {/* =================================
@@ -161,7 +161,7 @@ const Hero = () => {
 
               {/* LinkedIn social icon */}
               <a
-                href='https://www.linkedin.com/in/cameron-rice-03b257249/'
+                href='https://www.linkedin.com/in/rice-cameron/'
                 target='_blank'
                 className='text-gray-500 transition-colors duration-300 hover:text-blue-600'
               >
