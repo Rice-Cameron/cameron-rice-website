@@ -21,7 +21,7 @@ const ResumeSectionContainer = () => {
 
           <div className='mt-8'>
             <a
-              href='/2025CameronRiceResume.pdf'
+              href='/CameronRiceResume.pdf'
               download
               className='inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-blue-700'
               target='_blank'
@@ -52,28 +52,33 @@ const ResumeSectionContainer = () => {
             title='Experience'
             items={[
               {
-                title: 'Software Engineer',
-                organization: 'Zeek Interactive Inc.',
+                title: 'Software Support Technician',
+                organization: 'Open Dental Software · Salem, OR',
+                period: 'August 2025 - Present',
+                description: [
+                  'Resolve clinical workflow issues, system errors, and connectivity problems across core application features.',
+                  'Assist with software configuration, updates, service enrollment, and account-related requests.',
+                  'Consistently meet performance benchmarks by following internal documentation, workflows, and support standards.'
+                ]
+              },
+              {
+                title: 'Software Engineer Intern',
+                organization: 'Zeek Interactive Inc. · St. George, UT',
                 period: 'May 2024 - September 2024',
                 description: [
-                  'Developed and maintained Laravel and FilamentPHP applications, improving client efficiency.',
-                  'Designed and integrated dynamic FilamentPHP dashboards, enhancing user experience for over 200+ users.',
-                  'Collaborated with a team of engineers to deliver scalable software solutions, reducing backend load times.',
-                  'Refactored legacy codebases, cutting technical debt and boosting maintainability.',
-                  'Created and optimized backend services for high-traffic applications, supporting thousands of daily requests.',
+                  'Developed and maintained Laravel and FilamentPHP applications.',
+                  'Collaborated with a team of engineers to deliver scalable software solutions.',
                   'Built and deployed RESTful APIs, enabling seamless integrations with third-party services.'
                 ]
               },
               {
-                title: 'QA Engineer',
-                organization: 'Zeek Interactive Inc.',
+                title: 'QA Engineer Intern',
+                organization: 'Zeek Interactive Inc. · Huntington Beach, CA',
                 period: 'May 2023 - September 2023',
                 description: [
-                  'Conducted automated and manual testing, reducing production bugs.',
-                  'Led cross-browser compatibility testing, ensuring validity across multiple platforms.',
-                  'Debugged and verified new feature releases, improving overall software stability.',
-                  'Identified and documented critical bugs, collaborating with developers to implement fixes.',
-                  'Partnered with developers to triage and resolve high-priority production issues.'
+                  'Conducted automated and manual software testing.',
+                  'Performed cross-browser compatibility testing to ensure performance across multiple platforms.',
+                  'Identified and documented critical bugs, collaborating with developers to implement fixes.'
                 ]
               }
             ]}
@@ -84,30 +89,23 @@ const ResumeSectionContainer = () => {
             title='Projects'
             items={[
               {
-                title: 'Lavender - Shift Work Sleep Management App',
+                title: 'Lavender - Shift Work Sleep Disorder App',
                 organization: '',
                 period: '',
                 description: [
                   'Project Manager leading a team of five developers, overseeing development cycles and timelines.',
-                  'Integrated Google Firebase services (Authentication, Firestore, Cloud Functions) with a React frontend, automating scheduling for shift workers.',
-                  'Partnered with a sleep psychology expert to ensure scheduling recommendations align with research-backed methodologies.'
+                  'Integrated Google Firebase services including Authentication, Firestore, and Cloud Functions with a React frontend to automate sleep scheduling for shift workers.',
+                  'Partnered with a sleep psychology expert to ensure recommendations aligned with research-backed methodologies.'
                 ]
               },
               {
-                title: 'Work Projects - Internal Dashboard & EHR Software',
+                title: 'Portfolio Website - React / Next.js App',
                 organization: '',
                 period: '',
                 description: [
-                  'Developed FilamentPHP-powered internal dashboards, enabling partners to track project statuses in real-time.',
-                  'Built an Electronic Health Records (EHR) application for a major medical technology company, streamlining patient data management and increasing efficiency.'
-                ]
-              },
-              {
-                title: 'Portfolio Website - React/Next.js App',
-                organization: '',
-                period: '',
-                description: [
-                  'Designed and developed a portfolio website using Next.js, optimized for UI/UX with a focus on clean, responsive design.'
+                  'Developed a clean, responsive portfolio website using modern web tools.',
+                  'Strengthened fundamentals in component structure and page organization.',
+                  'Refined the site over time based on self-review and external feedback.'
                 ]
               }
             ]}
@@ -118,13 +116,12 @@ const ResumeSectionContainer = () => {
             title='Education'
             items={[
               {
-                title: 'B.S. Computer Science',
+                title: 'Bachelor of Science in Computer Science',
                 organization: 'Oregon State University',
-                period: 'September 2021 - June 2025',
+                period: 'June 2025',
                 description: [
                   'GPA: 3.90',
-                  'Concentration: Web and Mobile Application Development',
-                  'Relevant Courses: Web Development, Mobile App Development, Cloud App Development, Databases, Software Engineering I/II, Data Structures, Analysis of Algorithms'
+                  'Concentration: Web and Mobile Application Development'
                 ]
               }
             ]}
@@ -149,21 +146,22 @@ const ResumeSectionContainer = () => {
             >
               <SkillCategory
                 title='Languages'
-                skills={['PHP', 'JavaScript', 'Python', 'C/C++', 'Kotlin']}
+                skills={['JavaScript', 'PHP', 'Python', 'C/C++', 'Kotlin']}
               />
 
               <SkillCategory
                 title='Tools & Frameworks'
                 skills={[
                   'Laravel',
-                  'FilamentPHP',
+                  'SQL',
+                  'WordPress',
+                  'Google Firebase',
                   'ReactJS',
                   'NodeJS',
                   'NextJS',
-                  'Google Firebase',
-                  'Git & GitHub',
-                  'MySQL',
-                  'MongoDB'
+                  'Git',
+                  'AWS',
+                  'Docker'
                 ]}
               />
 
