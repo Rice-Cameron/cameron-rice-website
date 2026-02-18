@@ -28,8 +28,8 @@ const AboutSection = () => {
             About Me
           </h1>
           <p className='text-xl text-gray-600'>
-            Software engineer with a strong foundation in web
-            technologies, passionate about building scalable systems and APIs
+            Software engineer with a passion for web
+            technologies and a foundational background with building scalable systems and APIs
             using Node.js, Laravel, and cloud platforms.
           </p>
         </motion.div>

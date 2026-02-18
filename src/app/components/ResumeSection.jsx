@@ -52,9 +52,16 @@ const ResumeSectionContainer = () => {
             title='Experience'
             items={[
               {
+                title: 'Software Engineer',
+                organization: 'Open Dental Software · Salem, OR',
+                period: 'February 2026 - Present',
+                description: [
+                ]
+              },
+              {
                 title: 'Software Support Technician',
                 organization: 'Open Dental Software · Salem, OR',
-                period: 'August 2025 - Present',
+                period: 'August 2025 - February 2026',
                 description: [
                   'Resolve clinical workflow issues, system errors, and connectivity problems across core application features.',
                   'Assist with software configuration, updates, service enrollment, and account-related requests.',

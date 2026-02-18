@@ -33,16 +33,6 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {/* Title badge */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className='mb-2 inline-block rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-600 shadow-sm ring-1 ring-blue-100'
-            >
-              Software Engineer
-            </motion.div>
-
             {/* Main heading with animated underline */}
             <h1 className='mb-6 text-4xl font-bold leading-tight text-gray-900 md:text-5xl lg:text-6xl'>
               Hi, I'm{' '}
@@ -70,8 +60,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Software Engineer specializing in building scalable, efficient,
-              and secure applications with modern technologies.
+              Software Engineer at Open Dental Software.
             </motion.p>
 
             {/* =================================
