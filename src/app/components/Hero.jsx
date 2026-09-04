@@ -19,9 +19,9 @@ export default function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className='text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight text-zinc-950 leading-[1.15]'
+              className='text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-950 leading-tight'
             >
-              Building robust Windows desktop applications & modern full-stack systems.
+              Cameron Rice
             </motion.h1>
 
             {/* Bio text */}
@@ -31,7 +31,7 @@ export default function Hero() {
               transition={{ duration: 0.4, delay: 0.1 }}
               className='mt-5 text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl'
             >
-              Hi, I’m Cameron Rice. I'm a Computer Science graduate from Oregon State University (3.90 GPA) working full-time developing and maintaining production Windows client/server applications in .NET and MySQL, alongside building clean, performant web applications.
+              Computer Science graduate from Oregon State University (3.90 GPA) working full-time on core Windows desktop software at Open Dental in .NET and MySQL, alongside building clean, modern web applications.
             </motion.p>
 
             {/* Credential Tags */}
@@ -72,12 +72,16 @@ export default function Hero() {
                 </svg>
               </Link>
 
-              <Link
-                href='/resume'
+              <a
+                href='/CameronRiceResume.pdf'
+                download
                 className='inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-800 shadow-2xs transition-all hover:bg-zinc-50 hover:border-zinc-400 focus:outline-none'
               >
-                View Resume
-              </Link>
+                <svg className='h-4 w-4 text-zinc-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z' />
+                </svg>
+                Download Resume
+              </a>
 
               <div className='flex items-center gap-2 pl-2'>
                 <a

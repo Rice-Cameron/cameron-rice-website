@@ -7,11 +7,11 @@ export default function AboutSection() {
   const skillCategories = [
     {
       title: 'Languages',
-      skills: ['C#', 'JavaScript', 'TypeScript', 'PHP', 'Python', 'C/C++', 'SQL', 'Kotlin']
+      skills: ['C#', 'JavaScript', 'TypeScript', 'PHP', 'Python', 'C/C++', 'SQL']
     },
     {
       title: 'Frameworks & Systems',
-      skills: ['.NET (Windows Desktop)', 'React', 'Next.js', 'Node.js', 'Laravel', 'FilamentPHP', 'Tailwind CSS']
+      skills: ['.NET (WPF / WinForms)', 'React', 'Next.js', 'Node.js', 'Laravel', 'FilamentPHP', 'Tailwind CSS']
     },
     {
       title: 'Databases & Architecture',
@@ -40,7 +40,7 @@ export default function AboutSection() {
             About Me
           </h1>
           <p className='mt-4 text-lg text-zinc-600 leading-relaxed'>
-            I am a Software Engineer based in Salem, Oregon, currently developing Windows desktop client/server applications in .NET and MySQL at Open Dental Software.
+            I am a Software Engineer based in Salem, Oregon, currently developing the Windows desktop software in .NET and MySQL at Open Dental Software.
           </p>
         </motion.div>
 
@@ -59,13 +59,13 @@ export default function AboutSection() {
               I graduated from <strong>Oregon State University</strong> in June 2025 with a Bachelor of Science in Computer Science and a <strong>3.90 GPA</strong>, concentrating in Web and Mobile Application Development.
             </p>
             <p>
-              Today, I work full-time as a <strong>Software Engineer at Open Dental Software</strong>. My day-to-day work centers on engineering and maintaining high-performance Windows client/server desktop applications that connect directly to MySQL databases. I collaborate closely with engineering teams and technical support to debug complex clinical workflows, optimize database operations, and improve software stability for healthcare providers nationwide.
+              Today, I work full-time as a <strong>Software Engineer at Open Dental Software</strong>. As part of our core application team, my day-to-day work centers on maintaining and modernizing our Windows desktop software. I modernize existing windows by converting WinForms to WPF, develop custom controls, resolve bugs, and build new full-stack features and services in C# connecting our client with MySQL databases.
             </p>
             <p>
-              Prior to Open Dental Software, I completed software engineering and QA internships at <strong>Zeek Interactive</strong>, where I developed scalable Laravel and FilamentPHP web applications, constructed RESTful APIs, and led automated cross-platform test suites.
+              Prior to Open Dental Software, I completed software engineering and QA internships at <strong>Zeek Interactive</strong>, where I developed Laravel and FilamentPHP web apps, built RESTful APIs, and wrote automated cross-platform test suites.
             </p>
             <p>
-              Whether working on desktop runtime applications, relational databases, or responsive modern web apps in React and Next.js, I care deeply about writing clean, maintainable, and reliable software.
+              Whether working on our desktop software, database conversions, or modern web projects in React and Next.js, I care deeply about writing clean, maintainable, and reliable code.
             </p>
 
             <div className='pt-4'>
@@ -144,7 +144,7 @@ export default function AboutSection() {
                 Windows Desktop & .NET
               </h3>
               <p className='text-sm text-zinc-600 leading-relaxed'>
-                Building and maintaining robust client/server software in .NET and C#, engineered for high-throughput daily operations and data integrity.
+                Maintaining and modernizing our Windows desktop software in C# and .NET, converting WinForms to WPF, and creating reusable custom controls.
               </p>
             </div>
 
@@ -155,10 +155,10 @@ export default function AboutSection() {
                 </svg>
               </div>
               <h3 className='text-base font-bold text-zinc-900 mb-2'>
-                Databases & Backend Systems
+                Full-Stack & Databases
               </h3>
               <p className='text-sm text-zinc-600 leading-relaxed'>
-                Architecting relational databases with MySQL and PostgreSQL, optimizing queries, writing secure REST APIs, and automating services.
+                Authoring database schema conversion scripts, writing C# data layer classes for MySQL tables, and integrating logic directly with front-end windows.
               </p>
             </div>
 
@@ -169,10 +169,10 @@ export default function AboutSection() {
                 </svg>
               </div>
               <h3 className='text-base font-bold text-zinc-900 mb-2'>
-                Modern Web Applications
+                Web Development
               </h3>
               <p className='text-sm text-zinc-600 leading-relaxed'>
-                Creating responsive, accessible web applications with React, Next.js, Node.js, and modern TypeScript with clean component architectures.
+                Building clean, responsive web projects with React, Next.js, Node.js, and modern TypeScript with clean component architectures.
               </p>
             </div>
           </div>

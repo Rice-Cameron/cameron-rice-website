@@ -18,8 +18,9 @@
       "location": "Salem, OR",
       "period": "February 2026 - Present",
       "bullets": [
-        "Develop and maintain Windows client/server applications that connect to MySQL databases.",
-        "Collaborate with engineers and support staff to design, debug, and improve software used by dental providers and patients."
+        "Modernize core application windows by converting legacy WinForms to modular WPF architecture, developing custom reusable controls, and resolving software defects.",
+        "Engineer and deliver full-stack features and services in C#, integrating user-facing desktop interfaces with core application logic.",
+        "Author database conversion scripts for schema changes, implement C# data layer classes for new tables, and connect data models directly to frontend views."
       ]
     },
     {
@@ -87,32 +88,28 @@
   "skills": {
     "languages": [
       "C#",
+      "SQL",
       "JavaScript",
+      "TypeScript",
       "PHP",
       "Python",
-      "C/C++",
-      "Kotlin"
+      "C/C++"
     ],
     "frameworksAndTools": [
-      ".NET (Windows Desktop)",
+      ".NET",
+      "WPF",
+      "WinForms",
+      "MySQL",
       "Laravel",
-      "SQL",
       "WordPress",
       "Google Firebase",
       "ReactJS",
       "NodeJS",
       "NextJS",
       "Git",
-      "AWS",
       "Docker"
     ],
-    "softSkills": [
-      "Communication",
-      "Problem-Solving",
-      "Time Management",
-      "Strong Work Ethic",
-      "Critical Thinking"
-    ]
+    "softSkills": []
   },
-  "lastUpdated": "2026-09-04T17:26:07.731Z"
+  "lastUpdated": "2026-09-04T17:46:39.358Z"
 }
