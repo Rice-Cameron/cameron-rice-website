@@ -1,40 +1,41 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
+import resume from '@/data/resumeData.json';
 
-const ResumeSectionContainer = () => {
+export default function ResumeSectionContainer() {
+  const [viewMode, setViewMode] = useState('structured'); // 'structured' | 'pdf'
+
   return (
-    <div className='bg-gray-50 py-20'>
-      <div className='container mx-auto px-4 md:px-6'>
+    <div className='py-12 md:py-20 bg-[#fafafa] min-h-screen'>
+      <div className='container mx-auto px-4 md:px-6 max-w-4xl'>
+        {/* Header & Controls */}
         <motion.div
-          className='mx-auto mb-16 max-w-3xl text-center'
-          initial={{ opacity: 0, y: 20 }}
+          className='mb-10 text-center'
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
-          <h1 className='mb-6 text-4xl font-bold text-gray-900 md:text-5xl'>
+          <span className='text-xs font-bold uppercase tracking-wider text-zinc-500'>
+            Curriculum Vitae
+          </span>
+          <h1 className='mt-2 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-950'>
             Resume
           </h1>
-          <p className='text-xl text-gray-600'>
-            My professional journey, experience, and qualifications
+          <p className='mt-3 text-base sm:text-lg text-zinc-600 max-w-xl mx-auto'>
+            Professional experience, education, and technical competencies.
           </p>
 
-          <div className='mt-8'>
+          {/* Action Bar */}
+          <div className='mt-8 flex flex-wrap items-center justify-center gap-3'>
+            {/* Download Button */}
             <a
               href='/CameronRiceResume.pdf'
               download
-              className='inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-blue-700'
-              target='_blank'
-              rel='noopener noreferrer'
+              className='inline-flex items-center gap-2 rounded-lg bg-zinc-900 px-4 py-2.5 text-sm font-semibold text-white shadow-xs transition-all hover:bg-zinc-800'
             >
-              Download Resume
-              <svg
-                className='ml-2 h-5 w-5'
-                fill='none'
-                stroke='currentColor'
-                viewBox='0 0 24 24'
-                xmlns='http://www.w3.org/2000/svg'
-              >
+              <svg className='h-4 w-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                 <path
                   strokeLinecap='round'
                   strokeLinejoin='round'
@@ -42,229 +43,268 @@ const ResumeSectionContainer = () => {
                   d='M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'
                 />
               </svg>
+              Download PDF
             </a>
+
+            {/* View Mode Toggle */}
+            <div className='inline-flex rounded-lg border border-zinc-200 bg-white p-1 shadow-2xs text-xs font-medium text-zinc-700'>
+              <button
+                type='button'
+                onClick={() => setViewMode('structured')}
+                className={`rounded-md px-3 py-1.5 transition-colors ${
+                  viewMode === 'structured'
+                    ? 'bg-zinc-900 text-white font-semibold'
+                    : 'text-zinc-600 hover:text-zinc-900'
+                }`}
+              >
+                Structured View
+              </button>
+              <button
+                type='button'
+                onClick={() => setViewMode('pdf')}
+                className={`rounded-md px-3 py-1.5 transition-colors ${
+                  viewMode === 'pdf'
+                    ? 'bg-zinc-900 text-white font-semibold'
+                    : 'text-zinc-600 hover:text-zinc-900'
+                }`}
+              >
+                PDF Preview
+              </button>
+            </div>
           </div>
         </motion.div>
 
-        <div className='mx-auto max-w-5xl'>
-          {/* Experience Section */}
-          <ResumeSection
-            title='Experience'
-            items={[
-              {
-                title: 'Software Engineer',
-                organization: 'Open Dental Software · Salem, OR',
-                period: 'February 2026 - Present',
-                description: [
-                ]
-              },
-              {
-                title: 'Software Support Technician',
-                organization: 'Open Dental Software · Salem, OR',
-                period: 'August 2025 - February 2026',
-                description: [
-                  'Resolve clinical workflow issues, system errors, and connectivity problems across core application features.',
-                  'Assist with software configuration, updates, service enrollment, and account-related requests.',
-                  'Consistently meet performance benchmarks by following internal documentation, workflows, and support standards.'
-                ]
-              },
-              {
-                title: 'Software Engineer Intern',
-                organization: 'Zeek Interactive Inc. · St. George, UT',
-                period: 'May 2024 - September 2024',
-                description: [
-                  'Developed and maintained Laravel and FilamentPHP applications.',
-                  'Collaborated with a team of engineers to deliver scalable software solutions.',
-                  'Built and deployed RESTful APIs, enabling seamless integrations with third-party services.'
-                ]
-              },
-              {
-                title: 'QA Engineer Intern',
-                organization: 'Zeek Interactive Inc. · Huntington Beach, CA',
-                period: 'May 2023 - September 2023',
-                description: [
-                  'Conducted automated and manual software testing.',
-                  'Performed cross-browser compatibility testing to ensure performance across multiple platforms.',
-                  'Identified and documented critical bugs, collaborating with developers to implement fixes.'
-                ]
-              }
-            ]}
-          />
-
-          {/* Projects Section */}
-          <ResumeSection
-            title='Projects'
-            items={[
-              {
-                title: 'Lavender - Shift Work Sleep Disorder App',
-                organization: '',
-                period: '',
-                description: [
-                  'Project Manager leading a team of five developers, overseeing development cycles and timelines.',
-                  'Integrated Google Firebase services including Authentication, Firestore, and Cloud Functions with a React frontend to automate sleep scheduling for shift workers.',
-                  'Partnered with a sleep psychology expert to ensure recommendations aligned with research-backed methodologies.'
-                ]
-              },
-              {
-                title: 'Portfolio Website - React / Next.js App',
-                organization: '',
-                period: '',
-                description: [
-                  'Developed a clean, responsive portfolio website using modern web tools.',
-                  'Strengthened fundamentals in component structure and page organization.',
-                  'Refined the site over time based on self-review and external feedback.'
-                ]
-              }
-            ]}
-          />
-
-          {/* Education Section */}
-          <ResumeSection
-            title='Education'
-            items={[
-              {
-                title: 'Bachelor of Science in Computer Science',
-                organization: 'Oregon State University',
-                period: 'June 2025',
-                description: [
-                  'GPA: 3.90',
-                  'Concentration: Web and Mobile Application Development'
-                ]
-              }
-            ]}
-          />
-
-          {/* Skills Section */}
-          <div className='mb-16'>
-            <motion.h2
-              className='relative mb-8 border-l-4 border-blue-600 pl-4 text-2xl font-bold text-gray-900'
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              Skills
-            </motion.h2>
-
-            <motion.div
-              className='grid grid-cols-1 gap-6 md:grid-cols-2'
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <SkillCategory
-                title='Languages'
-                skills={['JavaScript', 'PHP', 'Python', 'C/C++', 'Kotlin']}
+        {/* View Mode: PDF Viewer */}
+        {viewMode === 'pdf' ? (
+          <div className='rounded-2xl border border-zinc-200 bg-white p-2 sm:p-4 shadow-sm'>
+            <div className='flex items-center justify-between pb-3 px-2 border-b border-zinc-100 mb-3 text-xs text-zinc-500'>
+              <span>Displaying <strong>CameronRiceResume.pdf</strong></span>
+              <a
+                href='/CameronRiceResume.pdf'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-zinc-900 font-semibold hover:underline inline-flex items-center gap-1'
+              >
+                Open full window
+                <svg className='h-3.5 w-3.5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' />
+                </svg>
+              </a>
+            </div>
+            <div className='w-full h-[850px] rounded-lg overflow-hidden border border-zinc-200'>
+              <iframe
+                src='/CameronRiceResume.pdf'
+                className='w-full h-full'
+                title='Cameron Rice Resume PDF'
               />
-
-              <SkillCategory
-                title='Tools & Frameworks'
-                skills={[
-                  'Laravel',
-                  'SQL',
-                  'WordPress',
-                  'Google Firebase',
-                  'ReactJS',
-                  'NodeJS',
-                  'NextJS',
-                  'Git',
-                  'AWS',
-                  'Docker'
-                ]}
-              />
-
-              <SkillCategory
-                title='Soft Skills'
-                skills={[
-                  'Communication',
-                  'Problem-Solving',
-                  'Time Management',
-                  'Strong Work Ethic',
-                  'Critical Thinking'
-                ]}
-              />
-            </motion.div>
+            </div>
           </div>
-        </div>
+        ) : (
+          /* View Mode: Structured Resume */
+          <div className='rounded-2xl border border-zinc-200 bg-white p-6 sm:p-10 md:p-12 shadow-xs space-y-12'>
+            {/* Resume Header */}
+            <div className='border-b border-zinc-200 pb-8'>
+              <div className='flex flex-col sm:flex-row sm:items-baseline justify-between gap-2'>
+                <div>
+                  <h2 className='text-2xl sm:text-3xl font-bold tracking-tight text-zinc-950'>
+                    {resume.name}
+                  </h2>
+                  <p className='text-sm sm:text-base font-medium text-zinc-600 mt-1'>
+                    {resume.title || 'Software Engineer'}
+                  </p>
+                </div>
+              </div>
+
+              {/* Contact & Links Bar */}
+              <div className='mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-zinc-600'>
+                {resume.contact?.email && (
+                  <a
+                    href={`mailto:${resume.contact.email}`}
+                    className='inline-flex items-center gap-1.5 hover:text-zinc-950 font-medium'
+                  >
+                    <svg className='h-3.5 w-3.5 text-zinc-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' />
+                    </svg>
+                    {resume.contact.email}
+                  </a>
+                )}
+                {resume.contact?.phone && (
+                  <span className='inline-flex items-center gap-1.5 font-medium'>
+                    <svg className='h-3.5 w-3.5 text-zinc-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z' />
+                    </svg>
+                    {resume.contact.phone}
+                  </span>
+                )}
+                {resume.contact?.github && (
+                  <a
+                    href={resume.contact.github}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='inline-flex items-center gap-1.5 hover:text-zinc-950 font-medium'
+                  >
+                    <span>GitHub: Rice-Cameron</span>
+                  </a>
+                )}
+                {resume.contact?.linkedin && (
+                  <a
+                    href={resume.contact.linkedin}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='inline-flex items-center gap-1.5 hover:text-zinc-950 font-medium'
+                  >
+                    <span>LinkedIn: rice-cameron</span>
+                  </a>
+                )}
+              </div>
+            </div>
+
+            {/* Experience Section */}
+            <div>
+              <h3 className='text-xs font-bold uppercase tracking-wider text-zinc-400 mb-6'>
+                Work Experience
+              </h3>
+
+              <div className='space-y-8'>
+                {resume.experience?.map((exp, idx) => (
+                  <div key={idx} className='group'>
+                    <div className='flex flex-col sm:flex-row sm:items-baseline sm:justify-between'>
+                      <div>
+                        <h4 className='text-base font-bold text-zinc-950'>
+                          {exp.role}
+                        </h4>
+                        <div className='text-sm font-medium text-zinc-700'>
+                          {exp.company}
+                        </div>
+                      </div>
+                      <span className='text-xs font-medium text-zinc-500 mt-1 sm:mt-0'>
+                        {exp.period}
+                      </span>
+                    </div>
+
+                    {exp.bullets && exp.bullets.length > 0 && (
+                      <ul className='mt-3 space-y-1.5 text-sm text-zinc-600 list-disc pl-4 leading-relaxed'>
+                        {exp.bullets.map((bullet, bIdx) => (
+                          <li key={bIdx}>{bullet}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Education Section */}
+            <div className='border-t border-zinc-100 pt-8'>
+              <h3 className='text-xs font-bold uppercase tracking-wider text-zinc-400 mb-6'>
+                Education
+              </h3>
+
+              <div className='space-y-4'>
+                {resume.education?.map((edu, idx) => (
+                  <div key={idx} className='flex flex-col sm:flex-row sm:items-baseline sm:justify-between'>
+                    <div>
+                      <h4 className='text-base font-bold text-zinc-950'>
+                        {edu.degree || 'Bachelor of Science in Computer Science'}
+                      </h4>
+                      <div className='text-sm text-zinc-700'>
+                        {edu.institution}
+                        {edu.gpa && (
+                          <span className='ml-2 inline-flex items-center rounded bg-zinc-100 px-2 py-0.5 text-xs font-semibold text-zinc-800'>
+                            GPA: {edu.gpa}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <span className='text-xs font-medium text-zinc-500 mt-1 sm:mt-0'>
+                      {edu.period}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Projects Section */}
+            {resume.projects && resume.projects.length > 0 && (
+              <div className='border-t border-zinc-100 pt-8'>
+                <h3 className='text-xs font-bold uppercase tracking-wider text-zinc-400 mb-6'>
+                  Key Projects
+                </h3>
+
+                <div className='space-y-6'>
+                  {resume.projects.map((proj, idx) => (
+                    <div key={idx}>
+                      <div className='flex flex-col sm:flex-row sm:items-baseline sm:justify-between'>
+                        <h4 className='text-base font-bold text-zinc-950'>
+                          {proj.title}
+                          {proj.subtitle && (
+                            <span className='text-sm font-normal text-zinc-500 ml-1.5'>
+                              — {proj.subtitle}
+                            </span>
+                          )}
+                        </h4>
+                      </div>
+
+                      {proj.bullets && proj.bullets.length > 0 && (
+                        <ul className='mt-2 space-y-1 text-sm text-zinc-600 list-disc pl-4 leading-relaxed'>
+                          {proj.bullets.map((b, bIdx) => (
+                            <li key={bIdx}>{b}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Technical Skills Section */}
+            <div className='border-t border-zinc-100 pt-8'>
+              <h3 className='text-xs font-bold uppercase tracking-wider text-zinc-400 mb-6'>
+                Technical Skills
+              </h3>
+
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+                {resume.skills?.languages && resume.skills.languages.length > 0 && (
+                  <div className='rounded-xl border border-zinc-200/80 bg-zinc-50/50 p-4'>
+                    <h5 className='text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2.5'>
+                      Languages
+                    </h5>
+                    <div className='flex flex-wrap gap-1.5'>
+                      {resume.skills.languages.map((lang, idx) => (
+                        <span
+                          key={idx}
+                          className='rounded bg-white border border-zinc-200 px-2.5 py-1 text-xs font-medium text-zinc-800'
+                        >
+                          {lang}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {resume.skills?.frameworksAndTools && resume.skills.frameworksAndTools.length > 0 && (
+                  <div className='rounded-xl border border-zinc-200/80 bg-zinc-50/50 p-4 md:col-span-2'>
+                    <h5 className='text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2.5'>
+                      Frameworks, Databases & Tools
+                    </h5>
+                    <div className='flex flex-wrap gap-1.5'>
+                      {resume.skills.frameworksAndTools.map((tool, idx) => (
+                        <span
+                          key={idx}
+                          className='rounded bg-white border border-zinc-200 px-2.5 py-1 text-xs font-medium text-zinc-800'
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
-};
-
-const ResumeSection = ({ title, items }) => {
-  return (
-    <div className='mb-16'>
-      <motion.h2
-        className='relative mb-8 border-l-4 border-blue-600 pl-4 text-2xl font-bold text-gray-900'
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        {title}
-      </motion.h2>
-
-      <div className='space-y-8'>
-        {items.map((item, index) => (
-          <ResumeItem
-            key={index}
-            title={item.title}
-            organization={item.organization}
-            period={item.period}
-            description={item.description}
-            delay={index * 0.2}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const ResumeItem = ({
-  title,
-  organization,
-  period,
-  description,
-  delay = 0
-}) => {
-  return (
-    <motion.div
-      className='flex flex-col md:flex-row'
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 + delay }}
-    >
-      <div className='mb-2 md:mb-0 md:w-1/3'>
-        <span className='block text-sm text-gray-500'>{period}</span>
-        <span className='font-medium text-gray-800'>{organization}</span>
-      </div>
-
-      <div className='border-l border-gray-200 md:w-2/3 md:pl-8'>
-        <h3 className='mb-3 text-xl font-bold text-gray-900'>{title}</h3>
-        <ul className='list-disc space-y-1 pl-5 text-gray-600'>
-          {description.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-      </div>
-    </motion.div>
-  );
-};
-
-const SkillCategory = ({ title, skills }) => {
-  return (
-    <div className='rounded-lg bg-white p-6 shadow-sm'>
-      <h3 className='mb-4 text-lg font-bold text-gray-900'>{title}</h3>
-      <ul className='flex flex-wrap gap-2'>
-        {skills.map((skill, index) => (
-          <li
-            key={index}
-            className='rounded-md bg-gray-100 px-3 py-1 text-sm text-gray-700'
-          >
-            {skill}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-export default ResumeSectionContainer;
+}

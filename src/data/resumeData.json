@@ -1,0 +1,118 @@
+{
+  "name": "Cameron Rice",
+  "title": "Software Engineer",
+  "currentRole": "Software Engineer at Open Dental Software",
+  "summary": "Software engineer specializing in Windows desktop application development (.NET/C#), client/server systems, and relational databases. Experienced in building responsive web applications and scalable backend APIs.",
+  "contact": {
+    "location": "Salem, OR",
+    "phone": "503-277-9403",
+    "email": "cameron5237@gmail.com",
+    "github": "https://github.com/Rice-Cameron",
+    "linkedin": "https://www.linkedin.com/in/rice-cameron",
+    "portfolio": "https://www.cameronrice.net"
+  },
+  "experience": [
+    {
+      "role": "Software Engineer",
+      "company": "Open Dental Software",
+      "location": "Salem, OR",
+      "period": "February 2026 - Present",
+      "bullets": [
+        "Develop and maintain Windows client/server applications that connect to MySQL databases.",
+        "Collaborate with engineers and support staff to design, debug, and improve software used by dental providers and patients."
+      ]
+    },
+    {
+      "role": "Software Support Technician",
+      "company": "Open Dental Software",
+      "location": "Salem, OR",
+      "period": "August 2025 - February 2026",
+      "bullets": [
+        "Resolves clinical workflow issues, system errors, and connectivity problems across core application features.",
+        "Assists with software configuration, updates, service enrollment, and account-related requests.",
+        "Consistently meeting performance benchmarks by following internal documentation, workflows, and support standards."
+      ]
+    },
+    {
+      "role": "Software Engineer Intern",
+      "company": "Zeek Interactive Inc.",
+      "location": "St. George, UT",
+      "period": "May 2024 - September 2024",
+      "bullets": [
+        "Developed and maintained Laravel and FilamentPHP applications.",
+        "Collaborated with a team of engineers to deliver scalable software.",
+        "Built and deployed RESTful APIs, enabling seamless integrations with third-party services."
+      ]
+    },
+    {
+      "role": "QA Engineer Intern",
+      "company": "Zeek Interactive Inc.",
+      "location": "Huntington Beach, CA",
+      "period": "May 2023 - September 2023",
+      "bullets": [
+        "Conducted automated and manual software testing.",
+        "Conducted cross-browser compatibility testing, ensuring performance across multiple platforms.",
+        "Identified and documented critical bugs, collaborating with developers to implement fixes."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Lavender",
+      "subtitle": "Shift Work Sleep Disorder App",
+      "bullets": [
+        "Project Manager leading a team of five developers, overseeing development cycles and timelines.",
+        "Integrated Google Firebase services (Authentication, Firestore, Cloud Functions) with a React frontend, automating sleep scheduling for shift workers.",
+        "Partnered with a sleep psychology expert to ensure scheduling recommendations align with research-backed methodologies."
+      ]
+    },
+    {
+      "title": "Portfolio Website",
+      "subtitle": "React/Next.js App",
+      "bullets": [
+        "Developed a clean, responsive portfolio website using modern web tools.",
+        "Strengthened fundamentals in component structure and page organization."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Oregon State University",
+      "period": "June 2025",
+      "gpa": "3.90",
+      "degree": "Bachelor of Science in Computer Science",
+      "bullets": []
+    }
+  ],
+  "skills": {
+    "languages": [
+      "C#",
+      "JavaScript",
+      "PHP",
+      "Python",
+      "C/C++",
+      "Kotlin"
+    ],
+    "frameworksAndTools": [
+      ".NET (Windows Desktop)",
+      "Laravel",
+      "SQL",
+      "WordPress",
+      "Google Firebase",
+      "ReactJS",
+      "NodeJS",
+      "NextJS",
+      "Git",
+      "AWS",
+      "Docker"
+    ],
+    "softSkills": [
+      "Communication",
+      "Problem-Solving",
+      "Time Management",
+      "Strong Work Ethic",
+      "Critical Thinking"
+    ]
+  },
+  "lastUpdated": "2026-09-04T17:26:07.731Z"
+}

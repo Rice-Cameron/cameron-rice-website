@@ -1,71 +1,65 @@
-# Cameron Rice Portfolio
+# Cameron Rice — Portfolio & Engineering Website
 
-Welcome to my personal portfolio site, built with Next.js and hosted at
-[www.cameronrice.net](https://www.cameronrice.net). Here you can find
-information about me, my resume, and a showcase of my featured projects spanning
-web, backend, DevOps, and mobile development.
+Welcome to the portfolio website of **Cameron Rice**, Software Engineer at Open Dental Software. Hosted at [www.cameronrice.net](https://www.cameronrice.net).
 
-## About This Site
+## Overview
 
-This site is a modern, responsive portfolio built with Next.js, React, and
-Tailwind CSS. It features:
+Built with Next.js (App Router), React, and Tailwind CSS. The website showcases software engineering projects across Windows desktop development, full-stack web applications, distributed backend services, and cloud infrastructure.
 
-- Project showcases with live demos and code links
-- Resume and about sections
-- Clean, accessible design
+### Key Features
 
-## Featured Projects
-
-### [LeetLog](https://leetlog-livid.vercel.app/)
-
-A modern web application for tracking and organizing your LeetCode problem
-solving journey. Built with Next.js, TypeScript, Tailwind CSS, and Prisma,
-LeetLog lets you log problems, solutions, and complexity, with a beautiful
-dashboard and filtering. [View code](https://github.com/Rice-Cameron/LeetLog)
-
-### [Time-Tracked Invoice Generator](https://github.com/Rice-Cameron/invoice-generator)
-
-A Django-based backend service for freelancers to manage clients, track time,
-and generate professional invoices. Features PDF generation, Stripe integration,
-recurring invoices, and automated email notifications.
-
-### [API Rate Limiter Microservice](https://github.com/Rice-Cameron/api-rate-limiter-microservice)
-
-A production-ready backend microservice for API rate limiting using the Token
-Bucket algorithm and Redis. Designed for high performance, with REST API
-endpoints, Docker support, and easy integration.
-
-### [Automated Minecraft Server Deployment](https://github.com/Rice-Cameron/CS312CourseProjectPt2)
-
-A DevOps project that automates the deployment and configuration of a Minecraft
-server on AWS using Terraform and Ansible. Demonstrates modern cloud automation
-and best practices.
-
-### [Lavender](https://lavender-sleep.web.app/)
-
-A responsive web application built with React and Firebase to help those with
-Shift Work Sleep Disorder track sleep patterns and receive personalized
-recommendations. Senior Capstone project at Oregon State University.
-
-### [Kotlin Planet App](https://github.com/Rice-Cameron/kotlin-planet-app)
-
-A simple Kotlin Android app that fetches and displays planet data from an
-external API. Built with Android Studio, it provides a clean UI for exploring
-planets interactively.
+- **Automated Resume Sync**: Never edit React component text when updating your resume! Drop an updated PDF into `public/CameronRiceResume.pdf`, and the build/dev workflow automatically parses and renders your latest experience, education, and skills.
+- **Dual Resume Viewer**: Visitors and recruiters can switch between an ATS-friendly structured web view and an embedded PDF viewer with one click.
+- **Refined Engineering Aesthetic**: Clean, modern typography and layout designed without generic AI templates or arbitrary skill percentage bars.
+- **Detailed Project Case Studies**: Direct links to live demos, architecture overviews, and source repositories.
 
 ---
 
-For more details, visit [www.cameronrice.net](https://www.cameronrice.net) or
-check out the individual project pages on this site.
+## Updating Your Resume
+
+Updating your resume on this website requires zero edits to React components or JSON files:
+
+1. Replace `public/CameronRiceResume.pdf` with your new resume PDF.
+2. Run `npm run dev` or `npm run build` (or `npm run sync-resume`).
+   - The automated `sync-resume.mjs` script parses your PDF using `pdf-parse` and updates `src/data/resumeData.json`.
+3. When you push to GitHub, Vercel automatically runs `prebuild` (`node scripts/sync-resume.mjs`), building the live site with your latest resume data.
+
+---
+
+## Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server (automatically syncs resume PDF)
+npm run dev
+
+# Run manual resume synchronization
+npm run sync-resume
+
+# Build for production
+npm run build
+
+# Start production build
+npm start
+```
+
+---
+
+## Featured Projects
+
+- **[Lavender](https://lavender-sleep.web.app/)**: Shift Work Sleep Disorder sleep-scheduling web application built with React and Google Firebase. Developed as an Oregon State University Senior Capstone project in partnership with sleep psychology researchers.
+- **[LeetLog](https://leetlog-livid.vercel.app/)**: Full-stack application for tracking algorithm solutions, time/space complexity, and pattern tags. Built with Next.js, TypeScript, Tailwind CSS, Prisma, and PostgreSQL (Neon).
+- **[API Rate Limiter Microservice](https://github.com/Rice-Cameron/api-rate-limiter-microservice)**: High-throughput token bucket rate limiter in Go and Redis with Docker containerization.
+- **[Time-Tracked Invoice Generator](https://github.com/Rice-Cameron/invoice-generator)**: Django-based backend for freelance client management, time logging, Stripe webhooks, and Celery PDF generation.
+- **[Automated Minecraft Server Deployment](https://github.com/Rice-Cameron/CS312CourseProjectPt2)**: Infrastructure as Code (IaC) DevOps automation using Terraform and Ansible on AWS EC2.
+- **[Kotlin Planet App](https://github.com/Rice-Cameron/kotlin-planet-app)**: Native Android mobile application in Kotlin exploring astronomical REST APIs.
+
+---
 
 ## Deployment
 
-This portfolio site is continuously deployed using
-[Vercel](https://vercel.com/), which provides seamless integration with GitHub.
-Every push to the main branch automatically triggers a new deployment, ensuring
-the live site at [www.cameronrice.net](https://www.cameronrice.net) is always up
-to date with the latest changes. Vercel handles all build, hosting, and CDN
-distribution for optimal performance and reliability.
-
-## TODO
-[ ] Blog
+Continuously deployed via **Vercel**. Build commands:
+- Prebuild: `node scripts/sync-resume.mjs`
+- Build: `next build`

@@ -6,79 +6,99 @@ import Image from 'next/image';
 
 export default function Lavender() {
   return (
-    <div className='container mx-auto px-4 py-20 md:px-6'>
+    <div className='container mx-auto px-4 py-16 md:px-6 max-w-4xl'>
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.4 }}
       >
-        <h1 className='mb-6 text-4xl font-bold text-gray-900'>Lavender</h1>
-        <p className='mb-8 text-lg text-gray-600'>
-          A responsive web application with modern UI/UX design principles.
-          Built using React.js and Google Firebase, aimed to help the lives of
-          those who suffer from Shift Work Sleep Disorder.
+        <Link
+          href='/projects'
+          className='inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-500 hover:text-zinc-900 transition-colors mb-6'
+        >
+          <svg className='h-4 w-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 19l-7-7m0 0l7-7m-7 7h18' />
+          </svg>
+          Back to Projects
+        </Link>
+
+        <h1 className='text-3xl sm:text-4xl font-bold tracking-tight text-zinc-950'>
+          Lavender
+        </h1>
+        <p className='mt-3 text-lg text-zinc-600 leading-relaxed'>
+          A responsive web application engineered to support individuals suffering from Shift Work Sleep Disorder through automated sleep scheduling and cognitive behavioural strategies.
         </p>
 
-        <div className='mb-12 flex h-96 w-full items-center justify-center rounded-lg bg-gray-200 text-gray-400'>
+        {/* Featured Image */}
+        <div className='mt-8 mb-12 flex h-80 sm:h-96 w-full items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50 p-4'>
           <Image
-            className='h-96 w-full rounded-lg object-contain'
+            className='h-full w-auto max-w-full rounded-lg object-contain shadow-xs'
             src='/lavender.png'
-            width={384}
-            height={384}
-            alt='Lavender'
+            width={600}
+            height={400}
+            alt='Lavender Application Preview'
           />
         </div>
 
-        <div className='mb-10 grid grid-cols-1 gap-8 md:grid-cols-2'>
-          <div>
-            <h2 className='mb-4 text-2xl font-bold text-gray-900'>
-              About this project
+        {/* Details Grid */}
+        <div className='mb-10 grid grid-cols-1 gap-10 md:grid-cols-3'>
+          <div className='md:col-span-2 space-y-4 text-zinc-700 leading-relaxed'>
+            <h2 className='text-xl font-bold text-zinc-900 border-b border-zinc-200 pb-2'>
+              About this Project
             </h2>
-            <p className='text-gray-600'>
-              This is my current and on-going Senior Capstone project at Oregon
-              State University. The project is aimed to help those who suffer
-              from Shift Work Sleep Disorder. The application will allow users
-              to track their sleep patterns and provide them with personalized
-              recommendations to improve their sleep quality. We are working
-              closely with a sleep specialist to ensure the application is
-              effective and beneficial for those who use it.
+            <p>
+              Lavender served as my Senior Capstone project at <strong>Oregon State University</strong>. I acted as Project Manager leading a team of five developers, establishing project milestones, managing sprints, and overseeing architectural decisions.
+            </p>
+            <p>
+              The application enables shift workers to input non-traditional work schedules and receive personalized recommendations to optimize circadian rhythms. In developing the algorithmic recommendations, our team partnered closely with a sleep psychology specialist to validate that schedule generation aligned with clinical methodologies.
+            </p>
+            <p>
+              On the technical side, the application integrates Google Firebase Authentication, Cloud Firestore for persistent schedule storage, and Cloud Functions for backend automation, paired with a fast React and Vite frontend.
             </p>
           </div>
+
           <div>
-            <h2 className='mb-4 text-2xl font-bold text-gray-900'>
+            <h2 className='text-xl font-bold text-zinc-900 border-b border-zinc-200 pb-2 mb-4'>
               Technologies Used
             </h2>
-            <ul className='list-disc space-y-1 pl-5 text-gray-600'>
-              <li>React</li>
-              <li>Node.js</li>
-              <li>Vite</li>
-              <li>Google Firebase</li>
-            </ul>
+            <div className='flex flex-wrap gap-2'>
+              {['React.js', 'Google Firebase', 'Cloud Functions', 'Firestore', 'Vite', 'JavaScript'].map((tech) => (
+                <span
+                  key={tech}
+                  className='rounded-md border border-zinc-200 bg-zinc-50 px-2.5 py-1 text-xs font-medium text-zinc-800'
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className='mt-8 pt-6 border-t border-zinc-200'>
+              <span className='block text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-2'>
+                Project Role
+              </span>
+              <p className='text-sm text-zinc-800 font-medium'>
+                Project Manager & Full-Stack Developer
+              </p>
+              <p className='text-xs text-zinc-500 mt-0.5'>
+                Oregon State University Capstone
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className='flex flex-wrap gap-4'>
-          <Link
+        {/* Action Button */}
+        <div className='pt-6 border-t border-zinc-200'>
+          <a
             href='https://lavender-sleep.web.app/'
             target='_blank'
-            className='inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-blue-700'
+            rel='noopener noreferrer'
+            className='inline-flex items-center gap-2 rounded-lg bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-zinc-800'
           >
-            View Live Demo
-            <svg
-              className='ml-2 h-5 w-5'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
-              />
+            Launch Live Application
+            <svg className='h-4 w-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' />
             </svg>
-          </Link>
+          </a>
         </div>
       </motion.div>
     </div>

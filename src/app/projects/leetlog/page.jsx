@@ -6,122 +6,113 @@ import Image from 'next/image';
 
 export default function LeetLog() {
   return (
-    <div className='container mx-auto px-4 py-20 md:px-6'>
+    <div className='container mx-auto px-4 py-16 md:px-6 max-w-4xl'>
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.4 }}
       >
-        <h1 className='mb-6 text-4xl font-bold text-gray-900'>LeetLog</h1>
-        <p className='mb-8 text-lg text-gray-600'>
-          A modern web application for tracking and organizing your LeetCode
-          problem solving journey. LeetLog helps you keep track of the problems
-          you've solved, your solutions, and important metadata like time and
-          space complexity.
+        <Link
+          href='/projects'
+          className='inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-500 hover:text-zinc-900 transition-colors mb-6'
+        >
+          <svg className='h-4 w-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 19l-7-7m0 0l7-7m-7 7h18' />
+          </svg>
+          Back to Projects
+        </Link>
+
+        <h1 className='text-3xl sm:text-4xl font-bold tracking-tight text-zinc-950'>
+          LeetLog
+        </h1>
+        <p className='mt-3 text-lg text-zinc-600 leading-relaxed'>
+          A modern full-stack web application designed for tracking, analyzing, and organizing algorithmic solutions, time/space complexity notes, and interview prep metrics.
         </p>
 
-        <div className='mb-12 flex h-96 w-full items-center justify-center rounded-lg bg-gray-200 text-gray-400'>
+        <div className='mt-8 mb-12 flex h-80 sm:h-96 w-full items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50 p-4'>
           <Image
-            className='h-96 w-full rounded-lg object-contain'
+            className='h-full w-auto max-w-full rounded-lg object-contain shadow-xs'
             src='/leetlog.png'
-            width={384}
-            height={216}
+            width={700}
+            height={400}
             alt='LeetLog screenshot'
           />
         </div>
 
-        <div className='mb-10 grid grid-cols-1 gap-8 md:grid-cols-2'>
-          <div>
-            <h2 className='mb-4 text-2xl font-bold text-gray-900'>
-              About this project
+        <div className='mb-10 grid grid-cols-1 gap-10 md:grid-cols-3'>
+          <div className='md:col-span-2 space-y-4 text-zinc-700 leading-relaxed'>
+            <h2 className='text-xl font-bold text-zinc-900 border-b border-zinc-200 pb-2'>
+              About this Project
             </h2>
-            <p className='text-gray-600'>
-              LeetLog is a modern web application designed to help developers
-              track and organize their LeetCode problem solving journey. Built
-              with Next.js and TypeScript, it provides a clean, intuitive
-              interface for managing problem solutions, notes, and metadata.
+            <p>
+              LeetLog was built to solve the fragmentation of tracking competitive programming progress across spreadsheets and plain text files. Built with Next.js and TypeScript, it provides an intuitive interface for capturing solution nuances, architectural patterns, and recurrence relations.
             </p>
-            <p className='mt-4 text-gray-600'>
-              The application features a comprehensive form for capturing all
-              aspects of problem solving, including solution approaches,
-              challenges faced, time and space complexity analysis, and
-              categorization. It also includes a dashboard for viewing and
-              filtering problems by various criteria.
+            <p>
+              The platform incorporates a structured schema powered by Prisma ORM and serverless PostgreSQL on Neon. Users can categorize problems by algorithmic technique (e.g., Two Pointers, Dynamic Programming, Topological Sort) and document time and space complexity evaluations.
             </p>
           </div>
+
           <div>
-            <h2 className='mb-4 text-2xl font-bold text-gray-900'>
+            <h2 className='text-xl font-bold text-zinc-900 border-b border-zinc-200 pb-2 mb-4'>
               Technologies Used
             </h2>
             <div className='flex flex-wrap gap-2'>
-              <span className='rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800'>
-                Next.js
-              </span>
-              <span className='rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800'>
-                TypeScript
-              </span>
-              <span className='rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800'>
-                Tailwind CSS
-              </span>
-              <span className='rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800'>
-                Prisma
-              </span>
-              <span className='rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800'>
-                Neon (PostgreSQL)
-              </span>
+              {['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL (Neon)', 'Server Actions'].map((tech) => (
+                <span
+                  key={tech}
+                  className='rounded-md border border-zinc-200 bg-zinc-50 px-2.5 py-1 text-xs font-medium text-zinc-800'
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
           </div>
         </div>
 
-        <div className='mb-8'>
-          <h2 className='mb-4 text-2xl font-semibold text-gray-800'>
-            Features
-          </h2>
-          <ul className='list-disc space-y-2 pl-5 text-gray-600'>
-            <li>Track LeetCode problems with title, URL, and difficulty</li>
-            <li>Document solution approaches and challenges</li>
-            <li>Record time and space complexity</li>
-            <li>Track problem categories and trigger keywords</li>
-            <li>Modern, responsive UI with dark mode support</li>
+        <div className='mb-10 rounded-xl border border-zinc-200 bg-zinc-50/70 p-6'>
+          <h3 className='text-sm font-bold uppercase tracking-wider text-zinc-700 mb-3'>
+            Key Engineering Highlights
+          </h3>
+          <ul className='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-zinc-600'>
+            <li className='flex items-center gap-2'>
+              <span className='h-1.5 w-1.5 rounded-full bg-zinc-400' />
+              Complexity & space analysis documentation
+            </li>
+            <li className='flex items-center gap-2'>
+              <span className='h-1.5 w-1.5 rounded-full bg-zinc-400' />
+              Relational PostgreSQL indexing with Prisma
+            </li>
+            <li className='flex items-center gap-2'>
+              <span className='h-1.5 w-1.5 rounded-full bg-zinc-400' />
+              Algorithmic taxonomy and pattern tagging
+            </li>
+            <li className='flex items-center gap-2'>
+              <span className='h-1.5 w-1.5 rounded-full bg-zinc-400' />
+              Responsive UI with clean typography
+            </li>
           </ul>
         </div>
-        <div className='flex flex-wrap gap-4'>
-          <Link
+
+        <div className='flex flex-wrap gap-3 pt-6 border-t border-zinc-200'>
+          <a
             href='https://leetlog-livid.vercel.app/'
             target='_blank'
-            className='inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-blue-700'
+            rel='noopener noreferrer'
+            className='inline-flex items-center gap-2 rounded-lg bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-zinc-800'
           >
-            View Live Demo
-            <svg
-              className='ml-2 h-5 w-5'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
-              />
+            Launch Live App
+            <svg className='h-4 w-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' />
             </svg>
-          </Link>
-          <Link
+          </a>
+          <a
             href='https://github.com/Rice-Cameron/LeetLog'
             target='_blank'
-            className='inline-flex items-center rounded-lg border border-gray-300 px-6 py-3 font-medium text-gray-700 transition-colors duration-200 hover:border-gray-400'
+            rel='noopener noreferrer'
+            className='inline-flex items-center gap-2 rounded-lg border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-800 transition-colors hover:bg-zinc-50 hover:border-zinc-400'
           >
-            View Code
-            <svg
-              className='ml-2 h-5 w-5'
-              fill='currentColor'
-              viewBox='0 0 24 24'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z' />
-            </svg>
-          </Link>
+            View GitHub Source
+          </a>
         </div>
       </motion.div>
     </div>
