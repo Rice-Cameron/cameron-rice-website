@@ -3,95 +3,85 @@
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 
-const ProjectsSection = () => {
-  const projects = [
-    {
-      title: 'Lavender',
-      description:
-        'A responsive web application with modern UI/UX design principles. Built using React.js and Google Firebase, aimed to help the lives of those who suffer from Shift Work Sleep Disorder.',
-      image: '/lavender.png',
-      tags: ['Firebase', 'React', 'JavaScript', 'Vite'],
-      link: '/projects/lavender'
-    },
-    {
-      title: 'LeetLog',
-      description:
-        "A modern web application for tracking and organizing your LeetCode problem solving journey. LeetLog helps you keep track of the problems you've solved, your solutions, and important metadata like time and space complexity.",
-      image: '/leetlog.png',
-      tags: [
-        'Next.js',
-        'TypeScript',
-        'Tailwind CSS',
-        'Prisma',
-        'Neon (PostgreSQL)'
-      ],
-      link: '/projects/leetlog',
-      github: 'https://github.com/Rice-Cameron/LeetLog'
-    },
-    {
-      title: 'API Rate Limiter Microservice',
-      description:
-        'A production-ready backend microservice for API rate limiting using the Token Bucket algorithm and Redis. Designed for high performance, clarity, and easy integration. Features global and per-client rate limits, REST API endpoints, configurable environment variables, and Docker support for seamless deployment.',
-      image: '/rate-limit.png',
-      tags: ['Go', 'Redis', 'Docker', 'Microservices', 'API'],
-      link: '/projects/api-rate-limiter-microservice',
-      github: 'https://github.com/Rice-Cameron/api-rate-limiter-microservice'
-    },
-    {
-      title: 'Time-Tracked Invoice Generator',
-      description:
-        'A comprehensive Django-based backend service that allows freelancers to manage clients, track time, and generate professional invoices with PDF generation and Stripe payment integration. Features include client management, project tracking, time logging, recurring invoices, and automated email notifications.',
-      image: '/django.png',
-      tags: [
-        'Python',
-        'Django',
-        'REST API',
-        'Stripe',
-        'PDF Generation',
-        'Celery'
-      ],
-      link: '/projects/invoice-generator',
-      github: 'https://github.com/Rice-Cameron/invoice-generator'
-    },
-    {
-      title: 'Automated Minecraft Server Deployment',
-      description:
-        'This project demonstrates modern DevOps practices by automating the deployment and configuration of a Minecraft server on AWS. Using Terraform and Ansible, it provisions cloud resources and configures the server with minimal manual intervention. The solution includes secure key management, automated provisioning, and step-by-step deployment instructions.',
-      image: '/devops.svg',
-      tags: ['Terraform', 'Ansible', 'AWS', 'EC2', 'DevOps'],
-      link: '/projects/minecraft-server-deployment',
-      github: 'https://github.com/Rice-Cameron/CS312CourseProjectPt2'
-    },
-    {
-      title: 'Planet API Mobile App',
-      description:
-        'A very simple Kotlin mobile application that fetches data from the API Ninjas Planets API and displays it. This project was built using Android Studio.',
-      image: '/planets.png',
-      tags: ['Kotlin', 'Android Studio'],
-      link: '/projects/planets',
-      github: 'https://github.com/Rice-Cameron/kotlin-planet-app'
-    }
-  ];
+export const projects = [
+  {
+    title: 'Lavender',
+    description:
+      'A full-stack React and Google Firebase web application designed to automate sleep scheduling for shift workers. Developed as a Senior Capstone project at Oregon State University in partnership with sleep psychology researchers.',
+    image: '/lavender.png',
+    tags: ['React', 'Firebase Auth/Firestore', 'Cloud Functions', 'Vite'],
+    link: '/projects/lavender',
+    github: null
+  },
+  {
+    title: 'LeetLog',
+    description:
+      'A modern full-stack web application for logging, analyzing, and organizing algorithmic solutions. Built with Next.js and TypeScript, featuring time/space complexity metadata tracking, rich notes, and PostgreSQL persistence.',
+    image: '/leetlog.png',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL'],
+    link: '/projects/leetlog',
+    github: 'https://github.com/Rice-Cameron/LeetLog'
+  },
+  {
+    title: 'API Rate Limiter Microservice',
+    description:
+      'A production-ready backend microservice implementing the Token Bucket rate-limiting algorithm using Redis and Go. Features global and per-client quotas, health metrics, and Docker containerization.',
+    image: '/rate-limit.png',
+    tags: ['Go', 'Redis', 'Docker', 'Microservices', 'REST API'],
+    link: '/projects/api-rate-limiter-microservice',
+    github: 'https://github.com/Rice-Cameron/api-rate-limiter-microservice'
+  },
+  {
+    title: 'Time-Tracked Invoice Generator',
+    description:
+      'A comprehensive Django and Python backend service that enables client management, granular project time tracking, automated PDF invoice generation, and Stripe payment webhook integrations.',
+    image: '/django.png',
+    tags: ['Python', 'Django', 'REST API', 'Stripe', 'PDF Generation', 'Celery'],
+    link: '/projects/invoice-generator',
+    github: 'https://github.com/Rice-Cameron/invoice-generator'
+  },
+  {
+    title: 'Automated Minecraft Server Deployment',
+    description:
+      'Infrastructure as Code (IaC) project demonstrating modern DevOps practices on AWS. Uses Terraform for cloud infrastructure provisioning and Ansible for automated server configuration and security.',
+    image: '/devops.svg',
+    tags: ['Terraform', 'Ansible', 'AWS EC2', 'DevOps', 'Linux'],
+    link: '/projects/minecraft-server-deployment',
+    github: 'https://github.com/Rice-Cameron/CS312CourseProjectPt2'
+  },
+  {
+    title: 'Planet API Mobile App',
+    description:
+      'Native Android application built with Kotlin and Android Studio. Fetches celestial astronomical data from API Ninjas, with responsive UI rendering and local data handling.',
+    image: '/planets.png',
+    tags: ['Kotlin', 'Android Studio', 'REST API', 'Mobile'],
+    link: '/projects/planets',
+    github: 'https://github.com/Rice-Cameron/kotlin-planet-app'
+  }
+];
 
+export default function ProjectsSection() {
   return (
-    <section className='bg-gray-50 py-20'>
-      <div className='container mx-auto px-4 md:px-6'>
+    <section className='py-16 md:py-24 bg-[#fafafa]'>
+      <div className='container mx-auto px-4 md:px-6 max-w-6xl'>
         <motion.div
-          className='mb-16 text-center'
-          initial={{ opacity: 0, y: 20 }}
+          className='mb-12 max-w-2xl'
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
-          <h2 className='mb-4 text-3xl font-bold text-gray-900 md:text-4xl'>
+          <span className='text-xs font-bold uppercase tracking-wider text-zinc-500'>
+            Portfolio
+          </span>
+          <h2 className='mt-2 text-3xl font-bold tracking-tight text-zinc-950 sm:text-4xl'>
             Featured Projects
           </h2>
-          <p className='mx-auto max-w-3xl text-xl text-gray-600'>
-            Here are some of my recent works that showcase my skills and
-            experience in web and mobile development.
+          <p className='mt-3 text-base sm:text-lg text-zinc-600 leading-relaxed'>
+            A collection of engineering projects spanning full-stack web applications, distributed backend services, mobile development, and cloud infrastructure.
           </p>
         </motion.div>
 
-        <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
+        <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
           {projects.map((project, index) => (
             <div key={index} className='h-full'>
               <ProjectCard
@@ -108,6 +98,4 @@ const ProjectsSection = () => {
       </div>
     </section>
   );
-};
-
-export default ProjectsSection;
+}

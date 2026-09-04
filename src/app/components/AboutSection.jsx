@@ -1,205 +1,218 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
-const AboutSection = () => {
-  const skills = [
-    { name: 'JavaScript', level: 90 },
-    { name: 'React', level: 75 },
-    { name: 'Next.js', level: 65 },
-    { name: 'Node.js', level: 85 },
-    { name: 'PHP/Laravel', level: 80 },
-    { name: 'WordPress', level: 70 },
-    { name: 'AWS/Terraform/Ansible', level: 65 },
-    { name: 'SQL', level: 80 },
-    { name: 'Git', level: 90 }
+export default function AboutSection() {
+  const skillCategories = [
+    {
+      title: 'Languages',
+      skills: ['C#', 'JavaScript', 'TypeScript', 'PHP', 'Python', 'C/C++', 'SQL']
+    },
+    {
+      title: 'Frameworks & Systems',
+      skills: ['.NET (WPF / WinForms)', 'React', 'Next.js', 'Node.js', 'Laravel', 'FilamentPHP', 'Tailwind CSS']
+    },
+    {
+      title: 'Databases & Architecture',
+      skills: ['MySQL', 'PostgreSQL', 'Redis', 'Google Firebase', 'Client/Server Architecture', 'RESTful APIs']
+    },
+    {
+      title: 'Tools & Practices',
+      skills: ['Git', 'Docker', 'AWS', 'Terraform', 'Ansible', 'Automated Testing', 'Linux', 'Agile / Scrum']
+    }
   ];
 
   return (
-    <div className='py-20'>
-      <div className='container mx-auto px-4 md:px-6'>
+    <div className='py-16 md:py-24 bg-white'>
+      <div className='container mx-auto px-4 md:px-6 max-w-5xl'>
+        {/* Header */}
         <motion.div
-          className='mx-auto mb-16 max-w-3xl text-center'
-          initial={{ opacity: 0, y: 20 }}
+          className='max-w-3xl mb-16'
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
-          <h1 className='mb-6 text-4xl font-bold text-gray-900 md:text-5xl'>
+          <span className='text-xs font-bold uppercase tracking-wider text-zinc-500'>
+            Background & Experience
+          </span>
+          <h1 className='mt-2 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-950'>
             About Me
           </h1>
-          <p className='text-xl text-gray-600'>
-            Software engineer with a passion for web
-            technologies and a foundational background with building scalable systems and APIs
-            using Node.js, Laravel, and cloud platforms.
+          <p className='mt-4 text-lg text-zinc-600 leading-relaxed'>
+            I am a Software Engineer based in Salem, Oregon, currently developing the Windows desktop software in .NET and MySQL at Open Dental Software.
           </p>
         </motion.div>
 
-        <div className='mb-20 grid grid-cols-1 gap-16 md:grid-cols-2'>
+        {/* Journey & Experience Grid */}
+        <div className='grid grid-cols-1 gap-12 lg:grid-cols-12 mb-20'>
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            className='lg:col-span-7 space-y-5 text-zinc-700 leading-relaxed'
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
           >
-            <h2 className='mb-6 border-b border-gray-200 pb-3 text-2xl font-bold text-gray-900'>
-              My Journey
+            <h2 className='text-xl font-bold text-zinc-900 border-b border-zinc-200 pb-3'>
+              My Background
             </h2>
-            <div className='space-y-6 text-gray-600'>
-              <p>
-                Hi! I'm Cameron Rice, a software engineer with
-                a passion for building scalable and efficient applications. My
-                journey in software and web development began during my studies
-                at Oregon State University, where I developed a strong interest
-                in designing robust backend systems that power dynamic and
-                responsive applications.
-              </p>
-              <p>
-                Throughout the beginnings of my academic and professional
-                career, I've already worked extensively with backend
-                technologies like PHP (Laravel), JavaScript (Node.js), and
-                MySQL, specializing in authentication, database management, API
-                development, and cloud automation. I also have experience with
-                React and Next.js, but my primary focus and interest is in
-                backend engineering and infrastructure.
-              </p>
-              <p>
-                My internship experiences at Zeek Interactive have given me
-                hands-on experience in developing real-world backend
-                applications, including WordPress and Laravel development,
-                ensuring system stability, optimizing performance, and
-                collaborating with teams to deliver high-quality software
-                solutions. I'm always eager to explore new backend technologies,
-                cloud platforms, and best practices to refine my expertise as a
-                backend engineer.
-              </p>
+            <p>
+              I graduated from <strong>Oregon State University</strong> in June 2025 with a Bachelor of Science in Computer Science and a <strong>3.90 GPA</strong>, concentrating in Web and Mobile Application Development.
+            </p>
+            <p>
+              Today, I work full-time as a <strong>Software Engineer at Open Dental Software</strong>. As part of our core application team, my day-to-day work centers on maintaining and modernizing our Windows desktop software. I modernize existing windows by converting WinForms to WPF, develop custom controls, resolve bugs, and build new full-stack features and services in C# connecting our client with MySQL databases.
+            </p>
+            <p>
+              Prior to Open Dental Software, I completed software engineering and QA internships at <strong>Zeek Interactive</strong>, where I developed Laravel and FilamentPHP web apps, built RESTful APIs, and wrote automated cross-platform test suites.
+            </p>
+            <p>
+              Whether working on our desktop software, database conversions, or modern web projects in React and Next.js, I care deeply about writing clean, maintainable, and reliable code.
+            </p>
+
+            <div className='pt-4'>
+              <Link
+                href='/resume'
+                className='inline-flex items-center gap-2 text-sm font-semibold text-zinc-900 hover:text-zinc-600 transition-colors'
+              >
+                Read my full resume & experience timeline
+                <svg className='h-4 w-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M14 5l7 7m0 0l-7 7m7-7H3' />
+                </svg>
+              </Link>
             </div>
           </motion.div>
 
+          {/* Highlights Sidebar */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            className='lg:col-span-5 space-y-4'
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
           >
-            <h2 className='mb-6 border-b border-gray-200 pb-3 text-2xl font-bold text-gray-900'>
-              Technical Skills
+            <h2 className='text-xl font-bold text-zinc-900 border-b border-zinc-200 pb-3'>
+              At a Glance
             </h2>
-            <div className='space-y-4'>
-              {skills.map((skill, index) => (
-                <div key={index}>
-                  <div className='mb-1 flex justify-between'>
-                    <span className='font-medium text-gray-700'>
-                      {skill.name}
-                    </span>
-                    <span className='text-sm text-gray-500'>
-                      {skill.level}%
-                    </span>
-                  </div>
-                  <div className='h-2 w-full rounded-full bg-gray-200'>
-                    <motion.div
-                      className='h-2 rounded-full bg-blue-600'
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: 0.2 + index * 0.1 }}
-                    ></motion.div>
-                  </div>
-                </div>
-              ))}
+
+            <div className='rounded-xl border border-zinc-200 bg-zinc-50 p-5 space-y-4 text-sm'>
+              <div>
+                <span className='block text-xs font-semibold uppercase tracking-wider text-zinc-500'>
+                  Current Position
+                </span>
+                <span className='font-semibold text-zinc-900'>
+                  Software Engineer
+                </span>
+                <span className='block text-zinc-600'>Open Dental Software · Salem, OR</span>
+              </div>
+
+              <div className='border-t border-zinc-200/80 pt-3'>
+                <span className='block text-xs font-semibold uppercase tracking-wider text-zinc-500'>
+                  Education
+                </span>
+                <span className='font-semibold text-zinc-900'>
+                  B.S. in Computer Science
+                </span>
+                <span className='block text-zinc-600'>Oregon State University · June 2025</span>
+                <span className='inline-block mt-1 rounded bg-zinc-200/80 px-2 py-0.5 text-xs font-semibold text-zinc-800'>
+                  3.90 GPA
+                </span>
+              </div>
+
+              <div className='border-t border-zinc-200/80 pt-3'>
+                <span className='block text-xs font-semibold uppercase tracking-wider text-zinc-500'>
+                  Core Specialization
+                </span>
+                <span className='block text-zinc-700'>
+                  .NET Windows Desktop, MySQL Client/Server, Full-Stack Web Development
+                </span>
+              </div>
             </div>
           </motion.div>
         </div>
 
-        <motion.div
-          className='rounded-2xl bg-gray-50 p-8 md:p-12'
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-        >
-          <h2 className='mb-6 text-center text-2xl font-bold text-gray-900'>
-            My Approach
+        {/* What I Work On */}
+        <div className='mb-20'>
+          <h2 className='mb-6 text-2xl font-bold text-zinc-900'>
+            Core Focus Areas
           </h2>
-          <div className='grid grid-cols-1 gap-8 md:grid-cols-3'>
-            <div className='text-center'>
-              <div className='mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-600'>
-                <svg
-                  className='h-8 w-8'
-                  fill='none'
-                  stroke='currentColor'
-                  viewBox='0 0 24 24'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth={2}
-                    d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
-                  />
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            <div className='rounded-xl border border-zinc-200 bg-white p-6 shadow-2xs'>
+              <div className='flex h-10 w-10 items-center justify-center rounded-lg bg-zinc-100 text-zinc-900 mb-4'>
+                <svg className='h-5 w-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' />
                 </svg>
               </div>
-              <h3 className='mb-2 text-xl font-bold text-gray-900'>
-                Innovation
+              <h3 className='text-base font-bold text-zinc-900 mb-2'>
+                Windows Desktop & .NET
               </h3>
-              <p className='text-gray-600'>
-                Always exploring new technologies and approaches to create
-                cutting-edge solutions.
+              <p className='text-sm text-zinc-600 leading-relaxed'>
+                Maintaining and modernizing our Windows desktop software in C# and .NET, converting WinForms to WPF, and creating reusable custom controls.
               </p>
             </div>
 
-            <div className='text-center'>
-              <div className='mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-600'>
-                <svg
-                  className='h-8 w-8'
-                  fill='none'
-                  stroke='currentColor'
-                  viewBox='0 0 24 24'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth={2}
-                    d='M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4'
-                  />
+            <div className='rounded-xl border border-zinc-200 bg-white p-6 shadow-2xs'>
+              <div className='flex h-10 w-10 items-center justify-center rounded-lg bg-zinc-100 text-zinc-900 mb-4'>
+                <svg className='h-5 w-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4' />
                 </svg>
               </div>
-              <h3 className='mb-2 text-xl font-bold text-gray-900'>
-                Adaptability
+              <h3 className='text-base font-bold text-zinc-900 mb-2'>
+                Full-Stack & Databases
               </h3>
-              <p className='text-gray-600'>
-                Quickly adapting to project requirements and changing
-                technologies in the development landscape.
+              <p className='text-sm text-zinc-600 leading-relaxed'>
+                Authoring database schema conversion scripts, writing C# data layer classes for MySQL tables, and integrating logic directly with front-end windows.
               </p>
             </div>
 
-            <div className='text-center'>
-              <div className='mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-600'>
-                <svg
-                  className='h-8 w-8'
-                  fill='none'
-                  stroke='currentColor'
-                  viewBox='0 0 24 24'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth={2}
-                    d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
-                  />
+            <div className='rounded-xl border border-zinc-200 bg-white p-6 shadow-2xs'>
+              <div className='flex h-10 w-10 items-center justify-center rounded-lg bg-zinc-100 text-zinc-900 mb-4'>
+                <svg className='h-5 w-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9' />
                 </svg>
               </div>
-              <h3 className='mb-2 text-xl font-bold text-gray-900'>
-                Collaboration
+              <h3 className='text-base font-bold text-zinc-900 mb-2'>
+                Web Development
               </h3>
-              <p className='text-gray-600'>
-                Working effectively with teams to bring ideas to life and
-                deliver successful projects.
+              <p className='text-sm text-zinc-600 leading-relaxed'>
+                Building clean, responsive web projects with React, Next.js, Node.js, and modern TypeScript with clean component architectures.
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
+
+        {/* Technical Skills Taxonomy (Clean badges, NO BS percentage bars) */}
+        <div>
+          <div className='mb-6'>
+            <h2 className='text-2xl font-bold text-zinc-900'>
+              Technical Skills
+            </h2>
+            <p className='text-sm text-zinc-500 mt-1'>
+              Languages, frameworks, and tools I use across desktop, web, and infrastructure engineering.
+            </p>
+          </div>
+
+          <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+            {skillCategories.map((cat, idx) => (
+              <div
+                key={idx}
+                className='rounded-xl border border-zinc-200 bg-zinc-50/70 p-5'
+              >
+                <h3 className='text-sm font-bold uppercase tracking-wider text-zinc-700 mb-3'>
+                  {cat.title}
+                </h3>
+                <div className='flex flex-wrap gap-2'>
+                  {cat.skills.map((skill, sIdx) => (
+                    <span
+                      key={sIdx}
+                      className='rounded-md border border-zinc-200 bg-white px-3 py-1 text-xs font-medium text-zinc-800 shadow-2xs'
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
-};
-
-export default AboutSection;
+}

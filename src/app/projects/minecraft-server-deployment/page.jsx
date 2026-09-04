@@ -6,81 +6,81 @@ import Image from 'next/image';
 
 export default function MinecraftServerDeployment() {
   return (
-    <div className='container mx-auto px-4 py-20 md:px-6'>
+    <div className='container mx-auto px-4 py-16 md:px-6 max-w-4xl'>
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.4 }}
       >
-        <h1 className='mb-6 text-4xl font-bold text-gray-900'>
+        <Link
+          href='/projects'
+          className='inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-500 hover:text-zinc-900 transition-colors mb-6'
+        >
+          <svg className='h-4 w-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 19l-7-7m0 0l7-7m-7 7h18' />
+          </svg>
+          Back to Projects
+        </Link>
+
+        <h1 className='text-3xl sm:text-4xl font-bold tracking-tight text-zinc-950'>
           Automated Minecraft Server Deployment
         </h1>
-        <p className='mb-8 text-lg text-gray-600'>
-          This project demonstrates modern DevOps practices by automating the
-          deployment and configuration of a Minecraft server on AWS. Using
-          Infrastructure as Code (Terraform) and Configuration Management
-          (Ansible), the process provisions cloud resources and configures the
-          server with minimal manual intervention. The solution includes secure
-          key management, automated provisioning, and step-by-step deployment
-          instructions. It serves as a practical example of leveraging
-          automation tools to streamline cloud infrastructure and application
-          setup.
+        <p className='mt-3 text-lg text-zinc-600 leading-relaxed'>
+          Infrastructure as Code (IaC) and configuration management project utilizing Terraform and Ansible to automatically provision, harden, and manage AWS EC2 game servers.
         </p>
 
-        <div className='mb-12 flex h-96 w-full items-center justify-center rounded-lg bg-gray-200 text-gray-400'>
+        <div className='mt-8 mb-12 flex h-80 sm:h-96 w-full items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50 p-4'>
           <Image
-            className='h-96 w-full rounded-lg object-contain'
+            className='h-full w-auto max-w-full rounded-lg object-contain shadow-xs'
             src='/devops.svg'
-            width={384}
-            height={384}
-            alt='Automated Minecraft Server Deployment'
+            width={500}
+            height={400}
+            alt='DevOps Architecture'
           />
         </div>
 
-        <div className='mb-10 grid grid-cols-1 gap-8 md:grid-cols-2'>
-          <div>
-            <h2 className='mb-4 text-2xl font-bold text-gray-900'>
-              About this project
+        <div className='mb-10 grid grid-cols-1 gap-10 md:grid-cols-3'>
+          <div className='md:col-span-2 space-y-4 text-zinc-700 leading-relaxed'>
+            <h2 className='text-xl font-bold text-zinc-900 border-b border-zinc-200 pb-2'>
+              DevOps & Infrastructure Design
             </h2>
-            <p className='text-gray-600'>
-              The project uses Terraform to provision AWS infrastructure and
-              Ansible to configure the Minecraft server on an EC2 instance. It
-              features automated SSH key management, secure deployment, and
-              clear instructions for both setup and teardown. This approach
-              highlights best practices in DevOps and cloud automation, making
-              it easy to deploy, manage, and destroy cloud resources as needed.
+            <p>
+              This project demonstrates cloud automation best practices. Terraform scripts define VPC networking, security groups, subnets, and EC2 compute instances on AWS with idempotent declarations.
+            </p>
+            <p>
+              Once provisioned, Ansible playbooks handle OS configuration, automated Java runtime dependencies, systemd daemon configuration, firewall rules, and automated backup routines with zero manual console intervention.
             </p>
           </div>
+
           <div>
-            <h2 className='mb-4 text-2xl font-bold text-gray-900'>
+            <h2 className='text-xl font-bold text-zinc-900 border-b border-zinc-200 pb-2 mb-4'>
               Technologies Used
             </h2>
-            <ul className='list-disc space-y-1 pl-5 text-gray-600'>
-              <li>Terraform</li>
-              <li>Ansible</li>
-              <li>AWS</li>
-              <li>EC2</li>
-              <li>DevOps</li>
-            </ul>
+            <div className='flex flex-wrap gap-2'>
+              {['Terraform', 'Ansible', 'AWS EC2', 'VPC & Security Groups', 'Linux (Ubuntu)', 'DevOps'].map((tech) => (
+                <span
+                  key={tech}
+                  className='rounded-md border border-zinc-200 bg-zinc-50 px-2.5 py-1 text-xs font-medium text-zinc-800'
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className='flex flex-wrap gap-4'>
-          <Link
+        <div className='flex flex-wrap gap-3 pt-6 border-t border-zinc-200'>
+          <a
             href='https://github.com/Rice-Cameron/CS312CourseProjectPt2'
             target='_blank'
-            className='inline-flex items-center rounded-lg border border-gray-300 px-6 py-3 font-medium text-gray-700 transition-colors duration-200 hover:border-gray-400'
+            rel='noopener noreferrer'
+            className='inline-flex items-center gap-2 rounded-lg bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-zinc-800'
           >
-            View Code
-            <svg
-              className='ml-2 h-5 w-5'
-              fill='currentColor'
-              viewBox='0 0 24 24'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z' />
+            View GitHub Repository
+            <svg className='h-4 w-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M14 5l7 7m0 0l-7 7m7-7H3' />
             </svg>
-          </Link>
+          </a>
         </div>
       </motion.div>
     </div>
