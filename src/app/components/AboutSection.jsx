@@ -65,7 +65,7 @@ export default function AboutSection() {
               Prior to Open Dental Software, I completed software engineering and QA internships at <strong>Zeek Interactive</strong>, where I developed Laravel and FilamentPHP web apps, built RESTful APIs, and wrote automated cross-platform test suites.
             </p>
             <p>
-              Whether working on our desktop software, database conversions, or modern web projects in React and Next.js, I care deeply about writing clean, maintainable, and reliable code.
+              Whether working on our desktop software or modern web projects in React and Next.js, I care deeply about writing clean, maintainable, and reliable code.
             </p>
 
             <div className='pt-4'>
@@ -158,7 +158,7 @@ export default function AboutSection() {
                 Full-Stack & Databases
               </h3>
               <p className='text-sm text-zinc-600 leading-relaxed'>
-                Authoring database schema conversion scripts, writing C# data layer classes for MySQL tables, and integrating logic directly with front-end windows.
+                Authoring database schema scripts, writing C# data layer classes for MySQL tables, and integrating logic directly with front-end windows.
               </p>
             </div>
 
@@ -178,7 +178,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Technical Skills Taxonomy (Clean badges, NO BS percentage bars) */}
+        {/* Technical Skills Taxonomy */}
         <div>
           <div className='mb-6'>
             <h2 className='text-2xl font-bold text-zinc-900'>
