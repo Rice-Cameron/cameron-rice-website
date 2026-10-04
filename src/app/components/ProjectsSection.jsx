@@ -5,6 +5,24 @@ import ProjectCard from './ProjectCard';
 
 export const projects = [
   {
+    title: 'SysPulse',
+    description:
+      'A modern cross-platform Linux desktop system monitor built with .NET, Avalonia UI, and Entity Framework Core. Gathers kernel metrics directly from /proc and sysfs with zero P/Invoke overhead, featuring SQLite/MySQL snapshot persistence and theme switching.',
+    image: '/syspulse.png',
+    tags: ['C#', '.NET 9', 'Avalonia UI', 'XAML', 'MVVM', 'EF Core', 'Linux'],
+    link: '/projects/syspulse',
+    github: 'https://github.com/Rice-Cameron/SysPulse'
+  },
+  {
+    title: 'ricebowl',
+    description:
+      'A blazing fast, asynchronous terminal user interface (TUI) for tracking live NCAA College Football scores, play-by-play, box scores, and field position on a dynamic 100-yard ASCII field. Built with Rust, Ratatui, and Tokio. Go Beavs!',
+    image: '/ricebowl.png',
+    tags: ['Rust', 'Ratatui', 'Tokio (Async)', 'TUI', 'REST API', 'Linux'],
+    link: '/projects/ricebowl',
+    github: 'https://github.com/Rice-Cameron/ricebowl'
+  },
+  {
     title: 'Lavender',
     description:
       'A full-stack React and Google Firebase web application designed to automate sleep scheduling for shift workers. Developed as a Senior Capstone project at Oregon State University in partnership with sleep psychology researchers.',
@@ -16,7 +34,7 @@ export const projects = [
   {
     title: 'LeetLog',
     description:
-      'A modern full-stack web application for logging, analyzing, and organizing algorithmic solutions. Built with Next.js and TypeScript, featuring time/space complexity metadata tracking, rich notes, and PostgreSQL persistence.',
+      'A modern full-stack web application designed for tracking, analyzing, and organizing algorithmic solutions, time/space complexity notes, and interview prep metrics.',
     image: '/leetlog.png',
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL'],
     link: '/projects/leetlog',
@@ -32,15 +50,6 @@ export const projects = [
     github: 'https://github.com/Rice-Cameron/api-rate-limiter-microservice'
   },
   {
-    title: 'Time-Tracked Invoice Generator',
-    description:
-      'A comprehensive Django and Python backend service that enables client management, granular project time tracking, automated PDF invoice generation, and Stripe payment webhook integrations.',
-    image: '/django.png',
-    tags: ['Python', 'Django', 'REST API', 'Stripe', 'PDF Generation', 'Celery'],
-    link: '/projects/invoice-generator',
-    github: 'https://github.com/Rice-Cameron/invoice-generator'
-  },
-  {
     title: 'Automated Minecraft Server Deployment',
     description:
       'Infrastructure as Code (IaC) project demonstrating modern DevOps practices on AWS. Uses Terraform for cloud infrastructure provisioning and Ansible for automated server configuration and security.',
@@ -48,15 +57,6 @@ export const projects = [
     tags: ['Terraform', 'Ansible', 'AWS EC2', 'DevOps', 'Linux'],
     link: '/projects/minecraft-server-deployment',
     github: 'https://github.com/Rice-Cameron/CS312CourseProjectPt2'
-  },
-  {
-    title: 'Planet API Mobile App',
-    description:
-      'Native Android application built with Kotlin and Android Studio. Fetches celestial astronomical data from API Ninjas, with responsive UI rendering and local data handling.',
-    image: '/planets.png',
-    tags: ['Kotlin', 'Android Studio', 'REST API', 'Mobile'],
-    link: '/projects/planets',
-    github: 'https://github.com/Rice-Cameron/kotlin-planet-app'
   }
 ];
 
@@ -70,14 +70,11 @@ export default function ProjectsSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <span className='text-xs font-bold uppercase tracking-wider text-zinc-500'>
-            Portfolio
-          </span>
-          <h2 className='mt-2 text-3xl font-bold tracking-tight text-zinc-950 sm:text-4xl'>
+          <h2 className='text-3xl font-bold tracking-tight text-zinc-950 sm:text-4xl'>
             Featured Projects
           </h2>
           <p className='mt-3 text-base sm:text-lg text-zinc-600 leading-relaxed'>
-            A collection of engineering projects spanning full-stack web applications, distributed backend services, mobile development, and cloud infrastructure.
+            A collection of engineering projects spanning high-performance systems programming in Rust, desktop UI with .NET and Avalonia, distributed backend services, and modern full-stack web applications.
           </p>
         </motion.div>
 

@@ -15,10 +15,11 @@ I am a Software Engineer based in Salem, Oregon, and a Computer Science graduate
 
 ## Featured Projects
 
+- **[SysPulse](https://github.com/Rice-Cameron/SysPulse)**: Cross-platform Linux desktop system monitor built with .NET, Avalonia UI (C# / XAML / MVVM), and EF Core. Gathers kernel metrics directly from `/proc` and `sysfs` with zero P/Invoke overhead.
+- **[ricebowl](https://github.com/Rice-Cameron/ricebowl)**: Asynchronous terminal user interface (TUI) for tracking live NCAA College Football scores, play-by-play, box scores, and a 100-yard ASCII football field. Engineered with Rust, Ratatui, and Tokio. Go Beavs!
 - **[Lavender](https://lavender-sleep.web.app/)**: Shift Work Sleep Disorder sleep-scheduling web application built with React and Google Firebase. Developed as an Oregon State University Senior Capstone project in partnership with sleep psychology researchers.
 - **[LeetLog](https://leetlog-livid.vercel.app/)**: Full-stack application for tracking algorithm solutions, time/space complexity, and pattern tags. Built with Next.js, TypeScript, Tailwind CSS, Prisma, and PostgreSQL (Neon).
 - **[API Rate Limiter Microservice](https://github.com/Rice-Cameron/api-rate-limiter-microservice)**: Token bucket rate limiter in Go and Redis with Docker containerization.
-- **[Time-Tracked Invoice Generator](https://github.com/Rice-Cameron/invoice-generator)**: Django-based backend for freelance client management, time logging, Stripe webhooks, and Celery PDF generation.
 - **[Automated Minecraft Server Deployment](https://github.com/Rice-Cameron/CS312CourseProjectPt2)**: Infrastructure as Code (IaC) DevOps automation using Terraform and Ansible on AWS EC2.
 
 ## Links
