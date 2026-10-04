@@ -21,7 +21,7 @@ export default function Hero() {
               className='animate-hero-fade mt-5 text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl'
               style={{ animationDelay: '100ms' }}
             >
-              Computer Science graduate from Oregon State University (3.90 GPA) working full-time on core Windows desktop software at Open Dental in .NET and MySQL, alongside building clean, modern web applications.
+              Computer Science graduate from Oregon State University (3.90 GPA) working full-time on core Windows desktop software at Open Dental in .NET and MySQL, alongside building clean, modern applications.
             </p>
 
             {/* Credential Tags */}
