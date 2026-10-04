@@ -1,17 +1,10 @@
-'use client';
-
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function MinecraftServerDeployment() {
   return (
     <div className='container mx-auto px-4 py-16 md:px-6 max-w-4xl'>
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-      >
+      <div className='animate-hero-fade'>
         <Link
           href='/projects'
           className='inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-500 hover:text-zinc-900 transition-colors mb-6'
@@ -82,7 +75,7 @@ export default function MinecraftServerDeployment() {
             </svg>
           </a>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

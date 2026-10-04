@@ -1,6 +1,3 @@
-'use client';
-
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function AboutSection() {
@@ -27,12 +24,7 @@ export default function AboutSection() {
     <div className='py-16 md:py-24 bg-white'>
       <div className='container mx-auto px-4 md:px-6 max-w-5xl'>
         {/* Header */}
-        <motion.div
-          className='max-w-3xl mb-16'
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-        >
+        <div className='animate-hero-fade max-w-3xl mb-16'>
           <span className='text-xs font-bold uppercase tracking-wider text-zinc-500'>
             Background & Experience
           </span>
@@ -42,15 +34,13 @@ export default function AboutSection() {
           <p className='mt-4 text-lg text-zinc-600 leading-relaxed'>
             I am a Software Engineer based in Salem, Oregon, currently developing the Windows desktop software in .NET and MySQL at Open Dental Software.
           </p>
-        </motion.div>
+        </div>
 
         {/* Journey & Experience Grid */}
         <div className='grid grid-cols-1 gap-12 lg:grid-cols-12 mb-20'>
-          <motion.div
-            className='lg:col-span-7 space-y-5 text-zinc-700 leading-relaxed'
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
+          <div
+            className='animate-hero-fade lg:col-span-7 space-y-5 text-zinc-700 leading-relaxed'
+            style={{ animationDelay: '100ms' }}
           >
             <h2 className='text-xl font-bold text-zinc-900 border-b border-zinc-200 pb-3'>
               My Background
@@ -79,14 +69,12 @@ export default function AboutSection() {
                 </svg>
               </Link>
             </div>
-          </motion.div>
+          </div>
 
           {/* Highlights Sidebar */}
-          <motion.div
-            className='lg:col-span-5 space-y-4'
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
+          <div
+            className='animate-hero-fade lg:col-span-5 space-y-4'
+            style={{ animationDelay: '200ms' }}
           >
             <h2 className='text-xl font-bold text-zinc-900 border-b border-zinc-200 pb-3'>
               At a Glance
@@ -125,7 +113,7 @@ export default function AboutSection() {
                 </span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* What I Work On */}

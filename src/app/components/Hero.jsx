@@ -1,8 +1,5 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
@@ -15,31 +12,22 @@ export default function Hero() {
           {/* Left Text Column */}
           <div className='lg:col-span-7'>
             {/* Main Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className='text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-950 leading-tight'
-            >
+            <h1 className='animate-hero-fade text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-950 leading-tight'>
               Cameron Rice
-            </motion.h1>
+            </h1>
 
             {/* Bio text */}
-            <motion.p
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              className='mt-5 text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl'
+            <p
+              className='animate-hero-fade mt-5 text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl'
+              style={{ animationDelay: '100ms' }}
             >
               Computer Science graduate from Oregon State University (3.90 GPA) working full-time on core Windows desktop software at Open Dental in .NET and MySQL, alongside building clean, modern web applications.
-            </motion.p>
+            </p>
 
             {/* Credential Tags */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              className='mt-6 flex flex-wrap gap-2 text-xs font-medium text-zinc-600'
+            <div
+              className='animate-hero-fade mt-6 flex flex-wrap gap-2 text-xs font-medium text-zinc-600'
+              style={{ animationDelay: '200ms' }}
             >
               <span className='rounded-md bg-zinc-100 px-2.5 py-1 text-zinc-800 border border-zinc-200/60'>
                 C# / .NET Desktop
@@ -53,14 +41,12 @@ export default function Hero() {
               <span className='rounded-md bg-zinc-100 px-2.5 py-1 text-zinc-800 border border-zinc-200/60'>
                 Oregon State CS '25 (3.90 GPA)
               </span>
-            </motion.div>
+            </div>
 
             {/* Action Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.25 }}
-              className='mt-8 flex flex-wrap items-center gap-3.5'
+            <div
+              className='animate-hero-fade mt-8 flex flex-wrap items-center gap-3.5'
+              style={{ animationDelay: '250ms' }}
             >
               <Link
                 href='/projects'
@@ -115,16 +101,14 @@ export default function Hero() {
                   </svg>
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right Portrait Column */}
           <div className='lg:col-span-5 flex justify-center lg:justify-end'>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.15 }}
-              className='relative'
+            <div
+              className='animate-hero-scale relative'
+              style={{ animationDelay: '150ms' }}
             >
               {/* Clean architectural border frame */}
               <div className='relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-2xl p-2 bg-gradient-to-b from-zinc-200 to-zinc-100 shadow-md'>
@@ -139,7 +123,7 @@ export default function Hero() {
                   />
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

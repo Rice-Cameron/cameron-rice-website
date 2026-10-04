@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import resume from '@/data/resumeData.json';
 
 export default function ResumeSectionContainer() {
@@ -11,12 +10,7 @@ export default function ResumeSectionContainer() {
     <div className='py-12 md:py-20 bg-[#fafafa] min-h-screen'>
       <div className='container mx-auto px-4 md:px-6 max-w-4xl'>
         {/* Header & Controls */}
-        <motion.div
-          className='mb-10 text-center'
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-        >
+        <div className='animate-hero-fade mb-10 text-center'>
           <span className='text-xs font-bold uppercase tracking-wider text-zinc-500'>
             Curriculum Vitae
           </span>
@@ -72,7 +66,7 @@ export default function ResumeSectionContainer() {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* View Mode: PDF Viewer */}
         {viewMode === 'pdf' ? (

@@ -1,6 +1,3 @@
-'use client';
-
-import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 
 export const projects = [
@@ -64,11 +61,9 @@ export default function ProjectsSection() {
   return (
     <section className='py-16 md:py-24 bg-[#fafafa]'>
       <div className='container mx-auto px-4 md:px-6 max-w-6xl'>
-        <motion.div
-          className='mb-12 max-w-2xl'
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
+        <div
+          className='animate-hero-fade mb-12 max-w-2xl'
+          style={{ animationDelay: '100ms' }}
         >
           <h2 className='text-3xl font-bold tracking-tight text-zinc-950 sm:text-4xl'>
             Featured Projects
@@ -76,7 +71,7 @@ export default function ProjectsSection() {
           <p className='mt-3 text-base sm:text-lg text-zinc-600 leading-relaxed'>
             A collection of engineering projects spanning high-performance systems programming in Rust, desktop UI with .NET and Avalonia, distributed backend services, and modern full-stack web applications.
           </p>
-        </motion.div>
+        </div>
 
         <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
           {projects.map((project, index) => (
